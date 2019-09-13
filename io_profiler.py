@@ -85,6 +85,10 @@ def build_parser():
     parser.add_argument('--iterations', type=int, required=True,
                     help='Number of iterations to run')
 
+    parser.add_argument('--event-order',type=str, required=True,
+                    choices=['serial_access','random_blocks','random_events'],
+                    help='Order of events to read')
+
     return parser
 
 
@@ -147,9 +151,9 @@ def gen_sparse3d_data_filler(name, producer, max_voxels):
     return proc
 
 
-def gen_label_filler(label_mode, prepend_names, n_classes):
+def gen_label_filler(n_classes):
 
-    proc = larcv_io.ProcessConfig(proc_name=prepend_names + 'label', 
+    proc = larcv_io.ProcessConfig(proc_name='label', 
         proc_type='BatchFillerPIDLabel')
 
     proc.set_param('Verbosity',         '3')
@@ -171,6 +175,14 @@ def build_config_file(args):
         config = larcv_io.QueueIOConfig(name='IOTest')
     else:
         config = larcv_io.ThreadIOConfig(name='IOTest')
+        # Thread IO manages it's event selection in C++
+        if args.event_order == 'serial_access':
+            config.set_param("RandomAccess", 0)
+        if args.event_order == 'random_events':
+            config.set_param("RandomAccess", 1)
+        if args.event_order == 'random_blocks':
+            config.set_param("RandomAccess", 2)
+    
 
 
     file_name = get_file_name(args)
@@ -202,10 +214,12 @@ def build_config_file(args):
                     producer=label_producer, max_voxels=max_voxels)
     
     elif args.dataset == 'next':
-        data_producer = ""
-        label_producer = ""
-        max_voxels = 20000
-        raise Exception("NEXT data implementation not yet complete.")
+        data_producer = "voxels"
+        label_producer = "label"
+        max_voxels = 1000
+
+        data_proc  = gen_sparse3d_data_filler(name='data', producer=data_producer, max_voxels=max_voxels)
+        label_proc = gen_label_filler(n_classes=2)
 
     # Add the processes to the config:
     config.add_process(data_proc)
@@ -255,12 +269,12 @@ def create_interface_object(args):
 
     if args.distributed:
         if args.io_mode == 'queue':
-            larcv_interface = distributed_queue_interface.queue_interface()
+            larcv_interface = distributed_queue_interface.queue_interface(random_access_mode=args.event_order)
         else:
             larcv_interface = distributed_larcv_interface.thread_interface()
     else:
         if args.io_mode == 'queue':
-            larcv_interface = queueloader.queue_interface()
+            larcv_interface = queueloader.queue_interface(random_access_mode=args.event_order)
         else:
             larcv_interface = threadloader.thread_interface()
 
@@ -285,6 +299,7 @@ def create_interface_object(args):
         'label': 'label'
         })
 
+
     if args.distributed:
         if args.io_mode == 'queue':
             larcv_interface.prepare_manager('primary', io_config, COMM.Get_size() * args.local_batch_size, data_keys, color=0)
@@ -307,12 +322,16 @@ def event_loop(larcv_interface, args):
         if args.io_mode == 'queue':
             larcv_interface.prepare_next('primary')
             batch = larcv_interface.fetch_minibatch_data('primary')
-            assert(len(batch) == args.local_batch_size)
+            assert(len(batch['image']) == args.local_batch_size)
+            assert(len(batch['label']) == args.local_batch_size)
         elif args.io_mode == 'thread':
             if not args.distributed:
                 larcv_interface.next('primary')
             batch = larcv_interface.fetch_minibatch_data('primary')
-            assert(len(batch) == args.local_batch_size)
+            assert(len(batch['image']) == args.local_batch_size)
+            assert(len(batch['label']) == args.local_batch_size)
+
+
         iteration_end = time.time()
         if args.verbose:
             print("Read local batch of {} in {:.2} s".format(args.local_batch_size, iteration_end - iteration_start))

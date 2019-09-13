@@ -200,8 +200,7 @@ class QueueIOConfig(CoreConfig):
         self._params["Verbosity"] =  None
         self._params["EnableFilter"] =  None
         self._params["InputFiles"] =  None
-        self._params["RandomSeed"] =  None
-        self._params["RandomAccess"] =  None
+        self._params['RandomSeed'] = None
 
 
         self._defaults_set = False
@@ -217,8 +216,6 @@ class QueueIOConfig(CoreConfig):
             self._params['EnableFilter'] = "false"
         if self._params['RandomSeed'] is None:
             self._params['RandomSeed'] = "0"
-        if self._params['RandomAccess'] is None:
-            self._params['RandomAccess'] = "2"
 
         self._defaults_set = True
 
