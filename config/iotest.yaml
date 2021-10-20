@@ -1,0 +1,6 @@
+defaults:
+    - dataset: dune2d
+distributed: true
+iterations: 50
+minibatch_size: 2
+output_dir: output/${dataset.name}/${minibatch_size}/
