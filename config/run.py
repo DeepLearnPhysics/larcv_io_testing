@@ -5,7 +5,7 @@ from hydra.core.config_store import ConfigStore
 from omegaconf import MISSING
 
 
-from .dataset.dataset import dune2d, dune3d
+from .dataset.dataset_schema import dune2d, dune3d
 
 @dataclass
 class Run:

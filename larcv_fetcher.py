@@ -10,7 +10,7 @@ from larcv.config_builder import ConfigBuilder
 
 class larcv_fetcher(object):
 
-    def __init__(self, distributed, dataset, seed=None):
+    def __init__(self, distributed, dataset, seed=0):
 
 
         random_access_mode = dataset.access_mode
@@ -57,7 +57,6 @@ class larcv_fetcher(object):
 
         # Need to load up on data fillers.
         if self.dataset.dimension == 2:
-            print(self.dataset.input_shape.name)
             if self.dataset.input_shape.name == "sparse":
                 cb.add_batch_filler(
                     datatype  = "sparse2d",
