@@ -58,20 +58,30 @@ class larcv_fetcher(object):
         # Need to load up on data fillers.
         if self.dataset.dimension == 2:
             if self.dataset.input_shape.name == "sparse":
-                cb.add_batch_filler(
-                    datatype  = "sparse2d",
-                    producer  = self.dataset.producer,
-                    name      = "data",
-                    MaxVoxels = 20000,
-                    Augment   = False,
-                    Channels  = list(self.dataset.channels)
-                )
-            elif self.dataset.output_shape.name == "dense":
+                if self.dataset.output_shape.name == "sparse":
+                    cb.add_batch_filler(
+                        datatype  = "sparse2d",
+                        producer  = self.dataset.producer,
+                        name      = "data",
+                        MaxVoxels = 20000,
+                        Augment   = False,
+                        Channels  = list(self.dataset.channels)
+                    )
+                elif self.dataset.output_shape.name == "dense":
+                    cb.add_batch_filler(
+                        datatype  = "tensor2d",
+                        producer  = self.dataset.producer,
+                        name      = "data",
+                        TensorType= "sparse",
+                        Augment   = False,
+                        Channels  = list(self.dataset.channels)
+                    )
+            elif self.dataset.input_shape.name == "dense":
                 cb.add_batch_filler(
                     datatype  = "tensor2d",
                     producer  = self.dataset.producer,
                     name      = "data",
-                    TensorType= "sparse",
+                    TensorType= "dense",
                     Augment   = False,
                     Channels  = list(self.dataset.channels)
                 )
@@ -92,7 +102,8 @@ class larcv_fetcher(object):
                         name      = "data",
                         TensorType= "sparse",
                         Augment   = False,
-                        Channels  = (0)
+                        Channels  = (0,),
+                        Profile   = True,
                     )
 
 

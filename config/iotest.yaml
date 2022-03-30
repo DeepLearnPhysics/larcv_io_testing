@@ -4,4 +4,5 @@ defaults:
 distributed: true
 iterations: 50
 minibatch_size: 2
-output_dir: output/${dataset.name}/${minibatch_size}/
+id: ???
+output_dir: output/${id}/${dataset.name}/${minibatch_size}/${dataset.output_shape}_out/${dataset.input_shape}_in/

@@ -41,12 +41,16 @@ class iotest(object):
 
         self.configure_logger(rank)
 
+        logger = logging.getLogger()
+        logger.info(f"Size is {self.size}")
+
         self.iotest()
 
 
 
     def init_mpi(self):
         if not self.args.distributed:
+            self.size=1
             return 0
         else:
             if 'OMPI_COMM_WORLD_LOCAL_RANK' in os.environ:
@@ -56,6 +60,8 @@ class iotest(object):
 
             from mpi4py import MPI
             comm = MPI.COMM_WORLD
+            self.size=comm.Get_size()
+
             return comm.Get_rank()
 
 
@@ -66,7 +72,7 @@ class iotest(object):
         # Create a handler for STDOUT, but only on the root rank.
         # If not distributed, we still get 0 passed in here.
         if rank == 0:
-            stream_handler = logging.StreamHandler()
+            stream_handler = logging.StreamHandler(sys.stdout)
             formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
             stream_handler.setFormatter(formatter)
             handler = handlers.MemoryHandler(capacity = 0, target=stream_handler)

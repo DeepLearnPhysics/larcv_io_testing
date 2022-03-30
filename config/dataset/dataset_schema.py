@@ -39,15 +39,26 @@ class dune3d(Dataset):
     file:           str        = "train.h5"
     dimension:      int        = 3
 
-# @dataclass
-# class next_new(Dataset):
-#     data_directory: str        = MISSING
-#     file:           str        = "NEXT_White_Tl_train.h5"
-#     aux_file:       str        = "NEXT_White_Tl_test.h5"
-#     dimension:      int        = 3
-#
+@dataclass
+class cosmic_tagger_sparse(Dataset):
+    name:           str        = "cosmic_tagger"
+    data_directory: str        = MISSING
+    file:           str        = "cosmic_tagger_train.h5"
+    dimension:      int        = 2
+    channels:       list       = (0,1,2)
+
+@dataclass
+class cosmic_tagger_dense(Dataset):
+    name:           str        = "cosmic_tagger"
+    data_directory: str        = MISSING
+    file:           str        = "cosmic_tagger_train_dense.h5"
+    dimension:      int        = 2
+    channels:       list       = (0,1,2)
+    input_shape:    shape      = shape.dense
 
 cs = ConfigStore.instance()
 cs.store(group="dataset", name="dune2d",   node=dune2d)
 cs.store(group="dataset", name="dune3d",   node=dune3d)
+cs.store(group="dataset", name="cosmic_tagger_sparse",   node=cosmic_tagger_sparse)
+cs.store(group="dataset", name="cosmic_tagger_dense",   node=cosmic_tagger_dense)
 # cs.store(group="dataset", name="next_new", node=next_new)
