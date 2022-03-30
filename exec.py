@@ -117,7 +117,7 @@ class iotest(object):
 
             logger.info(f"{i}: Time to fetch a minibatch of data: {end - start:.2f}s")
 
-        logger.info(f"Total IO Time: {time.time() - global_start:.2f}s")
+        logger.info(f"Total IO Time: {time.time() - global_start:.4f}s")
 
 
 
