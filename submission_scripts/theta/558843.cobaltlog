@@ -1,0 +1,30 @@
+Jobid: 558843
+qsub --mode script -t 60 -n 4 -q debug-cache-quad -A datascience minibatch_weak_scaling_8nodes.qsub
+Thu Oct 21 21:36:57 2021 +0000 (UTC) submitted with cwd set to: /gpfs/mira-home/cadams/Theta/larcv3_scaling/larcv_io_testing/submission_scripts/theta
+jobid 558843 submitted from terminal /dev/pts/3
+2021-10-21 21:37:32,124 INFO: Starting Resource_Prologue
+2021-10-21 21:37:32,127 DEBUG: no enabling attribute found
+2021-10-21 21:37:32,127 INFO: Resource_Prologue finished with exit code 0
+Thu Oct 21 21:38:10 2021 +0000 (UTC) 
+Thu Oct 21 21:38:10 2021 +0000 (UTC) Command: '/gpfs/mira-home/cadams/Theta/larcv3_scaling/larcv_io_testing/submission_scripts/theta/minibatch_weak_scaling_8nodes.qsub'
+Thu Oct 21 21:38:10 2021 +0000 (UTC) 
+Thu Oct 21 21:38:10 2021 +0000 (UTC) Environment:
+Thu Oct 21 21:38:10 2021 +0000 (UTC) COBALT_PARTCORES=64
+Thu Oct 21 21:38:10 2021 +0000 (UTC) SHELL=/bin/bash
+Thu Oct 21 21:38:10 2021 +0000 (UTC) COBALT_PROJECT=datascience
+Thu Oct 21 21:38:10 2021 +0000 (UTC) COBALT_PARTNAME=3824-3826,3829
+Thu Oct 21 21:38:10 2021 +0000 (UTC) COBALT_JOBID=558843
+Thu Oct 21 21:38:10 2021 +0000 (UTC) COBALT_STARTTIME=1634852238
+Thu Oct 21 21:38:10 2021 +0000 (UTC) LOGNAME=cadams
+Thu Oct 21 21:38:10 2021 +0000 (UTC) USER=cadams
+Thu Oct 21 21:38:10 2021 +0000 (UTC) COBALT_ENDTIME=1634855838
+Thu Oct 21 21:38:10 2021 +0000 (UTC) COBALT_PARTSIZE=4
+Thu Oct 21 21:38:10 2021 +0000 (UTC) HOME=/home/cadams
+Thu Oct 21 21:38:10 2021 +0000 (UTC) COBALT_JOBSIZE=4
+Thu Oct 21 21:38:10 2021 +0000 (UTC) COBALT_QUEUE=debug-cache-quad
+Thu Oct 21 21:38:10 2021 +0000 (UTC) 
+Thu Oct 21 21:38:10 2021 +0000 (UTC) Info: stdin received from /dev/null
+Thu Oct 21 21:38:10 2021 +0000 (UTC) Info: stdout sent to /gpfs/mira-home/cadams/Theta/larcv3_scaling/larcv_io_testing/submission_scripts/theta/558843.output
+Thu Oct 21 21:38:10 2021 +0000 (UTC) Info: stderr sent to /gpfs/mira-home/cadams/Theta/larcv3_scaling/larcv_io_testing/submission_scripts/theta/558843.error
+Thu Oct 21 21:38:10 2021 +0000 (UTC) 
+Thu Oct 21 21:54:18 2021 +0000 (UTC) Info: task completed normally with an exit code of 0; initiating job cleanup and removal

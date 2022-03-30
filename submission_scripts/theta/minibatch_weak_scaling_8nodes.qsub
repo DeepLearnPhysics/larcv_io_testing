@@ -1,0 +1,58 @@
+#!/bin/sh
+#COBALT -t 60
+#COBALT -n 128
+#COBALT -q default
+#COBALT -A datascience
+
+WORKDIR=/home/cadams/Theta/larcv3_scaling/larcv_io_testing/
+cd $WORKDIR
+
+# Set up software deps:
+source /home/cadams/Theta/larcv3_scaling/setup.sh
+
+LOCAL_MINIBATCH=32
+for node in 64 128
+do
+    echo ${node}
+    # Loop over minibatch sizes in powers of two:
+    for power in 0 0 1 2 3 4 5 6
+    do
+        # How many ranks per node?
+        let NRANKS_PER_NODE=2**${power}
+        # How many ranks total?
+        let NRANKS=${NRANKS_PER_NODE}*${node}
+    	let minibatch=${LOCAL_MINIBATCH}*${NRANKS}
+        aprun -n ${NRANKS} -N ${NRANKS_PER_NODE} -cc depth -j 1 \
+        python exec.py distributed=true id=weak_scaling_${node}nodes \
+        dataset.output_shape=sparse \
+        minibatch_size=${minibatch}
+    done
+    # Loop over minibatch sizes in powers of two:
+    for power in 0 0 1 2 3 4 5 6
+    do
+        # How many ranks per node?
+        let NRANKS_PER_NODE=2**${power}
+        # How many ranks total?
+        let NRANKS=${NRANKS_PER_NODE}*${node}
+    	let minibatch=${LOCAL_MINIBATCH}*${NRANKS}
+        aprun -n ${NRANKS} -N ${NRANKS_PER_NODE} -cc depth -j 1 \
+        python exec.py distributed=true id=weak_scaling_${node}nodes \
+        dataset=dune3d \
+        dataset.output_shape=sparse \
+        minibatch_size=${minibatch}
+    done
+
+    # Loop over minibatch sizes in powers of two:
+    # for power in 0 0 1 2 3 4 5 6
+    # do
+    #     # How many ranks per node?
+    #     let NRANKS_PER_NODE=2**${power}
+    #     # How many ranks total?
+    #     let NRANKS=${NRANKS_PER_NODE}*${node}
+    #     let minibatch=${LOCAL_MINIBATCH}*${NRANKS}
+    #     aprun -n ${NRANKS} -N ${NRANKS_PER_NODE} -cc depth -j 1 \
+    #     python exec.py distributed=true id=weak_scaling_${node}nodes \
+    #     dataset.output_shape=dense \
+    #     minibatch_size=${minibatch}
+    # done
+done

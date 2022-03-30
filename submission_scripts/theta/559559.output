@@ -1,0 +1,3890 @@
+64
+2021-10-25 21:32:54,186 - INFO - Size is 64
+2021-10-25 21:32:54,188 - INFO - Running IO Test
+2021-10-25 21:32:54,263 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 2048
+output_dir....................: output/weak_scaling_64nodes/dune2d/2048/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:32:54,319 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:32:56,916 - INFO - 0: Time to fetch a minibatch of data: 0.10s
+2021-10-25 21:32:57,483 - INFO - 1: Time to fetch a minibatch of data: 0.57s
+2021-10-25 21:32:58,023 - INFO - 2: Time to fetch a minibatch of data: 0.54s
+2021-10-25 21:32:58,502 - INFO - 3: Time to fetch a minibatch of data: 0.48s
+2021-10-25 21:32:58,891 - INFO - 4: Time to fetch a minibatch of data: 0.39s
+2021-10-25 21:32:59,392 - INFO - 5: Time to fetch a minibatch of data: 0.50s
+2021-10-25 21:33:00,034 - INFO - 6: Time to fetch a minibatch of data: 0.63s
+2021-10-25 21:33:00,471 - INFO - 7: Time to fetch a minibatch of data: 0.44s
+2021-10-25 21:33:00,952 - INFO - 8: Time to fetch a minibatch of data: 0.48s
+2021-10-25 21:33:01,403 - INFO - 9: Time to fetch a minibatch of data: 0.45s
+2021-10-25 21:33:02,006 - INFO - 10: Time to fetch a minibatch of data: 0.60s
+2021-10-25 21:33:02,581 - INFO - 11: Time to fetch a minibatch of data: 0.57s
+2021-10-25 21:33:03,172 - INFO - 12: Time to fetch a minibatch of data: 0.59s
+2021-10-25 21:33:03,773 - INFO - 13: Time to fetch a minibatch of data: 0.60s
+2021-10-25 21:33:04,241 - INFO - 14: Time to fetch a minibatch of data: 0.47s
+2021-10-25 21:33:04,823 - INFO - 15: Time to fetch a minibatch of data: 0.58s
+2021-10-25 21:33:05,310 - INFO - 16: Time to fetch a minibatch of data: 0.48s
+2021-10-25 21:33:05,811 - INFO - 17: Time to fetch a minibatch of data: 0.50s
+2021-10-25 21:33:06,333 - INFO - 18: Time to fetch a minibatch of data: 0.52s
+2021-10-25 21:33:06,886 - INFO - 19: Time to fetch a minibatch of data: 0.55s
+2021-10-25 21:33:07,421 - INFO - 20: Time to fetch a minibatch of data: 0.53s
+2021-10-25 21:33:07,925 - INFO - 21: Time to fetch a minibatch of data: 0.50s
+2021-10-25 21:33:08,451 - INFO - 22: Time to fetch a minibatch of data: 0.52s
+2021-10-25 21:33:08,961 - INFO - 23: Time to fetch a minibatch of data: 0.51s
+2021-10-25 21:33:09,480 - INFO - 24: Time to fetch a minibatch of data: 0.52s
+2021-10-25 21:33:09,959 - INFO - 25: Time to fetch a minibatch of data: 0.48s
+2021-10-25 21:33:10,406 - INFO - 26: Time to fetch a minibatch of data: 0.44s
+2021-10-25 21:33:10,803 - INFO - 27: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:33:11,267 - INFO - 28: Time to fetch a minibatch of data: 0.46s
+2021-10-25 21:33:11,756 - INFO - 29: Time to fetch a minibatch of data: 0.49s
+2021-10-25 21:33:12,245 - INFO - 30: Time to fetch a minibatch of data: 0.49s
+2021-10-25 21:33:12,767 - INFO - 31: Time to fetch a minibatch of data: 0.52s
+2021-10-25 21:33:13,339 - INFO - 32: Time to fetch a minibatch of data: 0.57s
+2021-10-25 21:33:13,810 - INFO - 33: Time to fetch a minibatch of data: 0.47s
+2021-10-25 21:33:14,372 - INFO - 34: Time to fetch a minibatch of data: 0.56s
+2021-10-25 21:33:14,686 - INFO - 35: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:33:15,224 - INFO - 36: Time to fetch a minibatch of data: 0.53s
+2021-10-25 21:33:15,765 - INFO - 37: Time to fetch a minibatch of data: 0.54s
+2021-10-25 21:33:16,273 - INFO - 38: Time to fetch a minibatch of data: 0.51s
+2021-10-25 21:33:16,698 - INFO - 39: Time to fetch a minibatch of data: 0.42s
+2021-10-25 21:33:17,229 - INFO - 40: Time to fetch a minibatch of data: 0.53s
+2021-10-25 21:33:17,782 - INFO - 41: Time to fetch a minibatch of data: 0.55s
+2021-10-25 21:33:18,260 - INFO - 42: Time to fetch a minibatch of data: 0.48s
+2021-10-25 21:33:18,829 - INFO - 43: Time to fetch a minibatch of data: 0.57s
+2021-10-25 21:33:19,269 - INFO - 44: Time to fetch a minibatch of data: 0.44s
+2021-10-25 21:33:19,717 - INFO - 45: Time to fetch a minibatch of data: 0.45s
+2021-10-25 21:33:20,089 - INFO - 46: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:33:20,428 - INFO - 47: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:33:20,766 - INFO - 48: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:33:21,277 - INFO - 49: Time to fetch a minibatch of data: 0.51s
+2021-10-25 21:33:21,277 - INFO - Total IO Time: 24.96s
+Application 24696267 resources: utime ~913s, stime ~678s, Rss ~442932, inblocks ~349227074, outblocks ~0
+2021-10-25 21:33:39,429 - INFO - Size is 64
+2021-10-25 21:33:39,431 - INFO - Running IO Test
+2021-10-25 21:33:39,508 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 2048
+output_dir....................: output/weak_scaling_64nodes/dune2d/2048/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:33:39,563 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:33:41,142 - INFO - 0: Time to fetch a minibatch of data: 0.10s
+2021-10-25 21:33:41,430 - INFO - 1: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:33:41,757 - INFO - 2: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:33:42,039 - INFO - 3: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:33:42,351 - INFO - 4: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:33:42,683 - INFO - 5: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:33:43,016 - INFO - 6: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:33:43,268 - INFO - 7: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:33:43,601 - INFO - 8: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:33:43,893 - INFO - 9: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:33:44,278 - INFO - 10: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:33:44,581 - INFO - 11: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:33:44,953 - INFO - 12: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:33:45,268 - INFO - 13: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:33:45,508 - INFO - 14: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:33:45,863 - INFO - 15: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:33:46,166 - INFO - 16: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:33:46,424 - INFO - 17: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:33:46,759 - INFO - 18: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:33:47,068 - INFO - 19: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:33:47,387 - INFO - 20: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:33:47,691 - INFO - 21: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:33:48,032 - INFO - 22: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:33:48,314 - INFO - 23: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:33:48,586 - INFO - 24: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:33:48,908 - INFO - 25: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:33:49,206 - INFO - 26: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:33:49,519 - INFO - 27: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:33:49,800 - INFO - 28: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:33:50,015 - INFO - 29: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:33:50,306 - INFO - 30: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:33:50,629 - INFO - 31: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:33:51,011 - INFO - 32: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:33:51,300 - INFO - 33: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:33:51,633 - INFO - 34: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:33:51,894 - INFO - 35: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:33:52,209 - INFO - 36: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:33:52,521 - INFO - 37: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:33:52,823 - INFO - 38: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:33:53,060 - INFO - 39: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:33:53,352 - INFO - 40: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:33:53,749 - INFO - 41: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:33:54,090 - INFO - 42: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:33:54,336 - INFO - 43: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:33:54,576 - INFO - 44: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:33:54,867 - INFO - 45: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:33:55,103 - INFO - 46: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:33:55,353 - INFO - 47: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:33:55,626 - INFO - 48: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:33:55,895 - INFO - 49: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:33:55,895 - INFO - Total IO Time: 15.36s
+Application 24696268 resources: utime ~873s, stime ~672s, Rss ~443620, inblocks ~348818890, outblocks ~0
+2021-10-25 21:34:17,941 - INFO - Size is 128
+2021-10-25 21:34:17,944 - INFO - Running IO Test
+2021-10-25 21:34:18,041 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 4096
+output_dir....................: output/weak_scaling_64nodes/dune2d/4096/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:34:18,083 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:34:20,500 - INFO - 0: Time to fetch a minibatch of data: 0.12s
+2021-10-25 21:34:20,808 - INFO - 1: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:34:21,094 - INFO - 2: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:34:21,335 - INFO - 3: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:34:21,651 - INFO - 4: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:34:21,965 - INFO - 5: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:34:22,312 - INFO - 6: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:34:22,571 - INFO - 7: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:34:22,942 - INFO - 8: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:34:23,196 - INFO - 9: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:34:23,550 - INFO - 10: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:34:23,838 - INFO - 11: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:34:24,167 - INFO - 12: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:34:24,468 - INFO - 13: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:34:24,712 - INFO - 14: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:34:25,027 - INFO - 15: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:34:25,346 - INFO - 16: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:34:25,600 - INFO - 17: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:34:25,891 - INFO - 18: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:34:26,205 - INFO - 19: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:34:26,455 - INFO - 20: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:34:26,750 - INFO - 21: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:34:27,028 - INFO - 22: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:34:27,316 - INFO - 23: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:34:27,642 - INFO - 24: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:34:27,911 - INFO - 25: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:34:28,181 - INFO - 26: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:34:28,451 - INFO - 27: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:34:28,726 - INFO - 28: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:34:28,993 - INFO - 29: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:34:29,266 - INFO - 30: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:34:29,604 - INFO - 31: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:34:29,910 - INFO - 32: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:34:30,177 - INFO - 33: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:34:30,497 - INFO - 34: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:34:30,826 - INFO - 35: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:34:31,119 - INFO - 36: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:34:31,372 - INFO - 37: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:34:31,704 - INFO - 38: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:34:31,928 - INFO - 39: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:34:32,249 - INFO - 40: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:34:32,559 - INFO - 41: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:34:32,846 - INFO - 42: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:34:33,124 - INFO - 43: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:34:33,434 - INFO - 44: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:34:33,700 - INFO - 45: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:34:33,958 - INFO - 46: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:34:34,235 - INFO - 47: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:34:34,514 - INFO - 48: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:34:34,864 - INFO - 49: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:34:34,865 - INFO - Total IO Time: 14.98s
+Application 24696269 resources: utime ~1945s, stime ~992s, Rss ~625968, inblocks ~365213972, outblocks ~0
+2021-10-25 21:34:58,791 - INFO - Size is 256
+2021-10-25 21:34:58,793 - INFO - Running IO Test
+2021-10-25 21:34:58,906 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 8192
+output_dir....................: output/weak_scaling_64nodes/dune2d/8192/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:34:58,948 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:35:00,592 - INFO - 0: Time to fetch a minibatch of data: 0.14s
+2021-10-25 21:35:00,866 - INFO - 1: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:35:01,165 - INFO - 2: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:01,460 - INFO - 3: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:01,775 - INFO - 4: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:35:02,080 - INFO - 5: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:02,424 - INFO - 6: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:35:02,720 - INFO - 7: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:03,107 - INFO - 8: Time to fetch a minibatch of data: 0.39s
+2021-10-25 21:35:03,362 - INFO - 9: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:35:03,658 - INFO - 10: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:03,961 - INFO - 11: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:04,256 - INFO - 12: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:04,575 - INFO - 13: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:35:04,896 - INFO - 14: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:35:05,222 - INFO - 15: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:35:05,553 - INFO - 16: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:35:05,815 - INFO - 17: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:35:06,116 - INFO - 18: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:06,433 - INFO - 19: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:35:06,797 - INFO - 20: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:35:07,064 - INFO - 21: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:35:07,372 - INFO - 22: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:35:07,661 - INFO - 23: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:07,984 - INFO - 24: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:35:08,277 - INFO - 25: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:08,598 - INFO - 26: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:35:08,903 - INFO - 27: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:09,176 - INFO - 28: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:35:09,635 - INFO - 29: Time to fetch a minibatch of data: 0.46s
+2021-10-25 21:35:09,902 - INFO - 30: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:35:10,227 - INFO - 31: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:35:10,540 - INFO - 32: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:35:10,835 - INFO - 33: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:11,135 - INFO - 34: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:11,441 - INFO - 35: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:35:11,822 - INFO - 36: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:35:12,118 - INFO - 37: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:12,474 - INFO - 38: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:35:12,790 - INFO - 39: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:35:13,098 - INFO - 40: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:35:13,449 - INFO - 41: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:35:13,716 - INFO - 42: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:35:14,098 - INFO - 43: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:35:14,405 - INFO - 44: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:35:14,682 - INFO - 45: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:35:14,990 - INFO - 46: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:15,256 - INFO - 47: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:35:15,492 - INFO - 48: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:35:15,792 - INFO - 49: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:15,793 - INFO - Total IO Time: 15.84s
+Application 24696271 resources: utime ~4086s, stime ~1578s, Rss ~742524, inblocks ~378073572, outblocks ~0
+2021-10-25 21:35:41,899 - INFO - Size is 512
+2021-10-25 21:35:41,901 - INFO - Running IO Test
+2021-10-25 21:35:42,008 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 16384
+output_dir....................: output/weak_scaling_64nodes/dune2d/16384/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:35:42,052 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:35:43,737 - INFO - 0: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:35:44,070 - INFO - 1: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:35:44,341 - INFO - 2: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:35:44,608 - INFO - 3: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:35:44,909 - INFO - 4: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:45,202 - INFO - 5: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:45,508 - INFO - 6: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:45,830 - INFO - 7: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:35:46,183 - INFO - 8: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:35:46,467 - INFO - 9: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:35:46,762 - INFO - 10: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:47,071 - INFO - 11: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:35:47,376 - INFO - 12: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:47,744 - INFO - 13: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:35:48,078 - INFO - 14: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:35:48,445 - INFO - 15: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:35:48,839 - INFO - 16: Time to fetch a minibatch of data: 0.39s
+2021-10-25 21:35:49,101 - INFO - 17: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:35:49,482 - INFO - 18: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:35:49,818 - INFO - 19: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:35:50,120 - INFO - 20: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:50,346 - INFO - 21: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:35:50,685 - INFO - 22: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:35:50,969 - INFO - 23: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:35:51,248 - INFO - 24: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:35:51,659 - INFO - 25: Time to fetch a minibatch of data: 0.41s
+2021-10-25 21:35:51,943 - INFO - 26: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:35:52,256 - INFO - 27: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:35:52,538 - INFO - 28: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:35:52,850 - INFO - 29: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:35:53,202 - INFO - 30: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:35:53,579 - INFO - 31: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:35:53,832 - INFO - 32: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:35:54,151 - INFO - 33: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:35:54,426 - INFO - 34: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:35:54,773 - INFO - 35: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:35:55,074 - INFO - 36: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:55,403 - INFO - 37: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:35:55,688 - INFO - 38: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:35:55,992 - INFO - 39: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:35:56,269 - INFO - 40: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:35:56,633 - INFO - 41: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:35:56,943 - INFO - 42: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:35:57,220 - INFO - 43: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:35:57,495 - INFO - 44: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:35:57,783 - INFO - 45: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:58,045 - INFO - 46: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:35:58,323 - INFO - 47: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:35:58,613 - INFO - 48: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:35:58,964 - INFO - 49: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:35:58,965 - INFO - Total IO Time: 16.01s
+Application 24696272 resources: utime ~8453s, stime ~2612s, Rss ~751388, inblocks ~389799086, outblocks ~0
+2021-10-25 21:36:40,976 - INFO - Size is 1024
+2021-10-25 21:36:40,979 - INFO - Running IO Test
+2021-10-25 21:36:41,103 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 32768
+output_dir....................: output/weak_scaling_64nodes/dune2d/32768/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:36:41,146 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:36:43,074 - INFO - 0: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:36:43,377 - INFO - 1: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:36:43,658 - INFO - 2: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:36:43,955 - INFO - 3: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:36:44,248 - INFO - 4: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:36:44,533 - INFO - 5: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:36:44,851 - INFO - 6: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:36:45,168 - INFO - 7: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:36:45,512 - INFO - 8: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:36:45,853 - INFO - 9: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:36:46,160 - INFO - 10: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:36:46,496 - INFO - 11: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:36:46,799 - INFO - 12: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:36:47,138 - INFO - 13: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:36:47,449 - INFO - 14: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:36:47,809 - INFO - 15: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:36:48,125 - INFO - 16: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:36:48,391 - INFO - 17: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:36:48,756 - INFO - 18: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:36:49,071 - INFO - 19: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:36:49,348 - INFO - 20: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:36:49,721 - INFO - 21: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:36:50,004 - INFO - 22: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:36:50,342 - INFO - 23: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:36:50,641 - INFO - 24: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:36:50,918 - INFO - 25: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:36:53,345 - INFO - 26: Time to fetch a minibatch of data: 2.41s
+2021-10-25 21:36:53,649 - INFO - 27: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:36:53,877 - INFO - 28: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:36:54,108 - INFO - 29: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:36:54,377 - INFO - 30: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:36:54,740 - INFO - 31: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:36:55,025 - INFO - 32: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:36:55,283 - INFO - 33: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:36:55,575 - INFO - 34: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:36:55,896 - INFO - 35: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:36:56,252 - INFO - 36: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:36:56,576 - INFO - 37: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:36:56,882 - INFO - 38: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:36:57,168 - INFO - 39: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:36:57,464 - INFO - 40: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:36:57,829 - INFO - 41: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:36:58,126 - INFO - 42: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:36:58,383 - INFO - 43: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:36:58,704 - INFO - 44: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:36:58,967 - INFO - 45: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:36:59,220 - INFO - 46: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:36:59,534 - INFO - 47: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:36:59,896 - INFO - 48: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:37:00,183 - INFO - 49: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:37:00,184 - INFO - Total IO Time: 17.85s
+Application 24696273 resources: utime ~19166s, stime ~4989s, Rss ~607088, inblocks ~389208918, outblocks ~0
+2021-10-25 21:38:29,550 - INFO - Size is 2048
+2021-10-25 21:38:29,553 - INFO - Running IO Test
+2021-10-25 21:38:29,692 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 65536
+output_dir....................: output/weak_scaling_64nodes/dune2d/65536/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:38:29,736 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:38:32,380 - INFO - 0: Time to fetch a minibatch of data: 0.56s
+2021-10-25 21:38:32,727 - INFO - 1: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:38:33,062 - INFO - 2: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:38:33,326 - INFO - 3: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:38:33,624 - INFO - 4: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:38:34,013 - INFO - 5: Time to fetch a minibatch of data: 0.39s
+2021-10-25 21:38:34,325 - INFO - 6: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:38:34,669 - INFO - 7: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:38:34,983 - INFO - 8: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:38:35,306 - INFO - 9: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:38:35,596 - INFO - 10: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:38:35,919 - INFO - 11: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:38:36,206 - INFO - 12: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:38:36,625 - INFO - 13: Time to fetch a minibatch of data: 0.42s
+2021-10-25 21:38:36,913 - INFO - 14: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:38:37,358 - INFO - 15: Time to fetch a minibatch of data: 0.44s
+2021-10-25 21:38:37,596 - INFO - 16: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:38:37,910 - INFO - 17: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:38:38,217 - INFO - 18: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:38:38,512 - INFO - 19: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:38:38,811 - INFO - 20: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:38:39,119 - INFO - 21: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:38:39,385 - INFO - 22: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:38:39,699 - INFO - 23: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:38:40,080 - INFO - 24: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:38:40,360 - INFO - 25: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:38:40,644 - INFO - 26: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:38:40,990 - INFO - 27: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:38:41,284 - INFO - 28: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:38:41,589 - INFO - 29: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:38:41,845 - INFO - 30: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:38:42,232 - INFO - 31: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:38:42,485 - INFO - 32: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:38:42,833 - INFO - 33: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:38:43,133 - INFO - 34: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:38:43,428 - INFO - 35: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:38:43,786 - INFO - 36: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:38:44,084 - INFO - 37: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:38:44,386 - INFO - 38: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:38:44,650 - INFO - 39: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:38:44,954 - INFO - 40: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:38:45,267 - INFO - 41: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:38:45,574 - INFO - 42: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:38:45,936 - INFO - 43: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:38:46,256 - INFO - 44: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:38:46,555 - INFO - 45: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:38:46,804 - INFO - 46: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:38:47,068 - INFO - 47: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:38:47,336 - INFO - 48: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:38:47,633 - INFO - 49: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:38:47,634 - INFO - Total IO Time: 16.32s
+Application 24696276 resources: utime ~35754s, stime ~10594s, Rss ~740288, inblocks ~418435090, outblocks ~0
+2021-10-25 21:42:18,614 - INFO - Size is 4096
+2021-10-25 21:42:18,616 - INFO - Running IO Test
+2021-10-25 21:42:18,792 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 131072
+output_dir....................: output/weak_scaling_64nodes/dune2d/131072/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:42:18,845 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:42:23,001 - INFO - 0: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:42:23,325 - INFO - 1: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:42:23,697 - INFO - 2: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:42:24,010 - INFO - 3: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:42:24,326 - INFO - 4: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:42:24,638 - INFO - 5: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:42:25,012 - INFO - 6: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:42:25,376 - INFO - 7: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:42:25,729 - INFO - 8: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:42:26,052 - INFO - 9: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:42:26,410 - INFO - 10: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:42:26,775 - INFO - 11: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:42:27,174 - INFO - 12: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:42:27,547 - INFO - 13: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:42:27,885 - INFO - 14: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:42:28,305 - INFO - 15: Time to fetch a minibatch of data: 0.42s
+2021-10-25 21:42:28,674 - INFO - 16: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:42:29,049 - INFO - 17: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:42:29,439 - INFO - 18: Time to fetch a minibatch of data: 0.39s
+2021-10-25 21:42:29,783 - INFO - 19: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:42:30,075 - INFO - 20: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:42:30,478 - INFO - 21: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:42:30,763 - INFO - 22: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:42:31,123 - INFO - 23: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:42:31,456 - INFO - 24: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:42:31,813 - INFO - 25: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:42:32,113 - INFO - 26: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:42:32,429 - INFO - 27: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:42:32,740 - INFO - 28: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:42:33,093 - INFO - 29: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:42:33,389 - INFO - 30: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:42:33,733 - INFO - 31: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:42:34,070 - INFO - 32: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:42:34,471 - INFO - 33: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:42:34,747 - INFO - 34: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:42:35,036 - INFO - 35: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:42:35,377 - INFO - 36: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:42:35,725 - INFO - 37: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:42:36,064 - INFO - 38: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:42:36,312 - INFO - 39: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:42:36,635 - INFO - 40: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:42:37,004 - INFO - 41: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:42:37,327 - INFO - 42: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:42:37,652 - INFO - 43: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:42:37,945 - INFO - 44: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:42:38,239 - INFO - 45: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:42:38,500 - INFO - 46: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:42:38,780 - INFO - 47: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:42:39,056 - INFO - 48: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:42:39,434 - INFO - 49: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:42:39,435 - INFO - Total IO Time: 17.29s
+Application 24696278 resources: utime ~75249s, stime ~27842s, Rss ~749732, inblocks ~537300704, outblocks ~0
+2021-10-25 21:43:09,152 - INFO - Size is 64
+2021-10-25 21:43:09,154 - INFO - Running IO Test
+2021-10-25 21:43:09,228 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 2048
+output_dir....................: output/weak_scaling_64nodes/dune3d/2048/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:43:09,283 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:43:10,984 - INFO - 0: Time to fetch a minibatch of data: 0.07s
+2021-10-25 21:43:11,387 - INFO - 1: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:43:11,677 - INFO - 2: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:43:11,990 - INFO - 3: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:43:12,222 - INFO - 4: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:43:12,515 - INFO - 5: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:43:12,848 - INFO - 6: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:43:13,129 - INFO - 7: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:43:13,380 - INFO - 8: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:43:13,706 - INFO - 9: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:43:14,022 - INFO - 10: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:43:14,356 - INFO - 11: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:43:14,780 - INFO - 12: Time to fetch a minibatch of data: 0.42s
+2021-10-25 21:43:15,269 - INFO - 13: Time to fetch a minibatch of data: 0.49s
+2021-10-25 21:43:15,509 - INFO - 14: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:43:15,764 - INFO - 15: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:43:16,066 - INFO - 16: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:43:16,378 - INFO - 17: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:43:16,723 - INFO - 18: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:43:17,067 - INFO - 19: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:43:17,364 - INFO - 20: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:43:17,636 - INFO - 21: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:43:18,031 - INFO - 22: Time to fetch a minibatch of data: 0.39s
+2021-10-25 21:43:18,312 - INFO - 23: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:43:18,662 - INFO - 24: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:43:18,893 - INFO - 25: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:43:19,233 - INFO - 26: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:43:19,611 - INFO - 27: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:43:19,877 - INFO - 28: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:43:20,105 - INFO - 29: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:43:20,367 - INFO - 30: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:43:20,658 - INFO - 31: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:43:20,890 - INFO - 32: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:43:21,121 - INFO - 33: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:43:21,393 - INFO - 34: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:43:21,648 - INFO - 35: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:43:22,083 - INFO - 36: Time to fetch a minibatch of data: 0.43s
+2021-10-25 21:43:22,407 - INFO - 37: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:43:22,722 - INFO - 38: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:43:23,005 - INFO - 39: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:43:23,298 - INFO - 40: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:43:23,612 - INFO - 41: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:43:23,987 - INFO - 42: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:43:24,272 - INFO - 43: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:43:24,470 - INFO - 44: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:43:24,793 - INFO - 45: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:43:25,001 - INFO - 46: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:43:25,304 - INFO - 47: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:43:25,506 - INFO - 48: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:43:25,810 - INFO - 49: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:43:25,811 - INFO - Total IO Time: 15.40s
+Application 24696279 resources: utime ~691s, stime ~516s, Rss ~342304, inblocks ~317648940, outblocks ~0
+2021-10-25 21:43:43,446 - INFO - Size is 64
+2021-10-25 21:43:43,448 - INFO - Running IO Test
+2021-10-25 21:43:43,522 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 2048
+output_dir....................: output/weak_scaling_64nodes/dune3d/2048/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:43:43,576 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:43:45,069 - INFO - 0: Time to fetch a minibatch of data: 0.07s
+2021-10-25 21:43:45,291 - INFO - 1: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:43:45,554 - INFO - 2: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:43:45,815 - INFO - 3: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:43:46,058 - INFO - 4: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:43:46,309 - INFO - 5: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:43:46,536 - INFO - 6: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:43:46,748 - INFO - 7: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:43:46,968 - INFO - 8: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:43:47,198 - INFO - 9: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:43:47,459 - INFO - 10: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:43:47,763 - INFO - 11: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:43:48,017 - INFO - 12: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:43:48,290 - INFO - 13: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:43:48,488 - INFO - 14: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:43:48,717 - INFO - 15: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:43:48,982 - INFO - 16: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:43:49,211 - INFO - 17: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:43:49,448 - INFO - 18: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:43:49,672 - INFO - 19: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:43:49,905 - INFO - 20: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:43:50,153 - INFO - 21: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:43:50,402 - INFO - 22: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:43:50,654 - INFO - 23: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:43:50,828 - INFO - 24: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:43:51,052 - INFO - 25: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:43:51,335 - INFO - 26: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:43:51,602 - INFO - 27: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:43:51,823 - INFO - 28: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:43:51,990 - INFO - 29: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:43:52,164 - INFO - 30: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:43:52,416 - INFO - 31: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:43:52,646 - INFO - 32: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:43:52,841 - INFO - 33: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:43:53,092 - INFO - 34: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:43:53,386 - INFO - 35: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:43:53,602 - INFO - 36: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:43:53,826 - INFO - 37: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:43:54,046 - INFO - 38: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:43:54,251 - INFO - 39: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:43:54,481 - INFO - 40: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:43:54,763 - INFO - 41: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:43:54,998 - INFO - 42: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:43:55,231 - INFO - 43: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:43:55,406 - INFO - 44: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:43:55,614 - INFO - 45: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:43:55,796 - INFO - 46: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:43:56,008 - INFO - 47: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:43:56,182 - INFO - 48: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:43:56,340 - INFO - 49: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:43:56,340 - INFO - Total IO Time: 11.84s
+Application 24696280 resources: utime ~706s, stime ~517s, Rss ~342256, inblocks ~319629934, outblocks ~0
+2021-10-25 21:44:15,570 - INFO - Size is 128
+2021-10-25 21:44:15,571 - INFO - Running IO Test
+2021-10-25 21:44:15,666 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 4096
+output_dir....................: output/weak_scaling_64nodes/dune3d/4096/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:44:15,708 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:44:17,044 - INFO - 0: Time to fetch a minibatch of data: 0.09s
+2021-10-25 21:44:17,255 - INFO - 1: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:17,494 - INFO - 2: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:44:17,650 - INFO - 3: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:44:17,855 - INFO - 4: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:18,078 - INFO - 5: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:44:18,326 - INFO - 6: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:44:18,547 - INFO - 7: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:44:18,777 - INFO - 8: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:44:18,977 - INFO - 9: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:19,191 - INFO - 10: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:19,452 - INFO - 11: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:44:19,666 - INFO - 12: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:19,905 - INFO - 13: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:44:20,133 - INFO - 14: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:44:20,334 - INFO - 15: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:20,534 - INFO - 16: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:20,741 - INFO - 17: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:20,974 - INFO - 18: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:44:21,191 - INFO - 19: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:44:21,404 - INFO - 20: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:21,657 - INFO - 21: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:44:21,878 - INFO - 22: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:44:22,057 - INFO - 23: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:44:22,280 - INFO - 24: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:44:22,480 - INFO - 25: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:22,660 - INFO - 26: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:44:22,892 - INFO - 27: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:44:23,085 - INFO - 28: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:23,224 - INFO - 29: Time to fetch a minibatch of data: 0.14s
+2021-10-25 21:44:23,398 - INFO - 30: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:44:23,604 - INFO - 31: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:23,809 - INFO - 32: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:23,986 - INFO - 33: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:44:24,173 - INFO - 34: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:24,422 - INFO - 35: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:44:24,651 - INFO - 36: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:44:24,865 - INFO - 37: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:25,061 - INFO - 38: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:25,265 - INFO - 39: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:25,479 - INFO - 40: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:25,719 - INFO - 41: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:44:25,974 - INFO - 42: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:44:26,188 - INFO - 43: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:26,394 - INFO - 44: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:26,591 - INFO - 45: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:26,788 - INFO - 46: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:26,988 - INFO - 47: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:27,190 - INFO - 48: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:27,435 - INFO - 49: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:44:27,436 - INFO - Total IO Time: 10.98s
+Application 24696282 resources: utime ~1528s, stime ~763s, Rss ~388692, inblocks ~345177422, outblocks ~0
+2021-10-25 21:44:50,300 - INFO - Size is 256
+2021-10-25 21:44:50,302 - INFO - Running IO Test
+2021-10-25 21:44:50,395 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 8192
+output_dir....................: output/weak_scaling_64nodes/dune3d/8192/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:44:50,438 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:44:51,813 - INFO - 0: Time to fetch a minibatch of data: 0.10s
+2021-10-25 21:44:52,042 - INFO - 1: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:44:52,255 - INFO - 2: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:52,432 - INFO - 3: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:44:52,598 - INFO - 4: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:44:52,805 - INFO - 5: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:53,038 - INFO - 6: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:44:53,226 - INFO - 7: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:53,454 - INFO - 8: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:44:53,650 - INFO - 9: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:53,870 - INFO - 10: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:44:54,108 - INFO - 11: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:44:54,296 - INFO - 12: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:54,516 - INFO - 13: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:44:54,706 - INFO - 14: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:54,916 - INFO - 15: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:55,081 - INFO - 16: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:44:55,247 - INFO - 17: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:44:55,450 - INFO - 18: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:55,672 - INFO - 19: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:44:55,881 - INFO - 20: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:56,082 - INFO - 21: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:56,270 - INFO - 22: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:56,462 - INFO - 23: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:56,652 - INFO - 24: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:56,846 - INFO - 25: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:57,048 - INFO - 26: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:57,249 - INFO - 27: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:57,405 - INFO - 28: Time to fetch a minibatch of data: 0.15s
+2021-10-25 21:44:57,611 - INFO - 29: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:57,747 - INFO - 30: Time to fetch a minibatch of data: 0.14s
+2021-10-25 21:44:57,950 - INFO - 31: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:58,107 - INFO - 32: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:44:58,317 - INFO - 33: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:58,519 - INFO - 34: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:58,699 - INFO - 35: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:44:58,921 - INFO - 36: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:44:59,122 - INFO - 37: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:59,322 - INFO - 38: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:44:59,511 - INFO - 39: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:44:59,731 - INFO - 40: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:44:59,968 - INFO - 41: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:45:00,191 - INFO - 42: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:45:00,386 - INFO - 43: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:45:00,664 - INFO - 44: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:45:00,865 - INFO - 45: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:45:01,040 - INFO - 46: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:45:01,204 - INFO - 47: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:45:01,343 - INFO - 48: Time to fetch a minibatch of data: 0.14s
+2021-10-25 21:45:01,582 - INFO - 49: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:45:01,583 - INFO - Total IO Time: 10.37s
+Application 24696283 resources: utime ~3197s, stime ~1146s, Rss ~467996, inblocks ~347999864, outblocks ~0
+2021-10-25 21:45:35,545 - INFO - Size is 512
+2021-10-25 21:45:35,547 - INFO - Running IO Test
+2021-10-25 21:45:35,644 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 16384
+output_dir....................: output/weak_scaling_64nodes/dune3d/16384/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:45:35,688 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:45:37,156 - INFO - 0: Time to fetch a minibatch of data: 0.11s
+2021-10-25 21:45:37,396 - INFO - 1: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:45:37,612 - INFO - 2: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:45:37,814 - INFO - 3: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:45:38,022 - INFO - 4: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:45:38,237 - INFO - 5: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:45:38,453 - INFO - 6: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:45:38,610 - INFO - 7: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:45:38,820 - INFO - 8: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:45:39,147 - INFO - 9: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:45:39,353 - INFO - 10: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:45:39,554 - INFO - 11: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:45:39,752 - INFO - 12: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:45:39,945 - INFO - 13: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:45:40,129 - INFO - 14: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:45:40,347 - INFO - 15: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:45:40,514 - INFO - 16: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:45:40,678 - INFO - 17: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:45:40,859 - INFO - 18: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:45:41,119 - INFO - 19: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:45:41,316 - INFO - 20: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:45:41,524 - INFO - 21: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:45:41,753 - INFO - 22: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:45:41,911 - INFO - 23: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:45:42,098 - INFO - 24: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:45:42,280 - INFO - 25: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:45:42,467 - INFO - 26: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:45:42,669 - INFO - 27: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:45:42,876 - INFO - 28: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:45:43,036 - INFO - 29: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:45:43,212 - INFO - 30: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:45:43,443 - INFO - 31: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:45:43,652 - INFO - 32: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:45:43,847 - INFO - 33: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:45:44,030 - INFO - 34: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:45:44,196 - INFO - 35: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:45:44,514 - INFO - 36: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:45:44,677 - INFO - 37: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:45:44,845 - INFO - 38: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:45:45,093 - INFO - 39: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:45:45,269 - INFO - 40: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:45:45,575 - INFO - 41: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:45:45,734 - INFO - 42: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:45:45,951 - INFO - 43: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:45:46,163 - INFO - 44: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:45:46,351 - INFO - 45: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:45:46,503 - INFO - 46: Time to fetch a minibatch of data: 0.14s
+2021-10-25 21:45:46,692 - INFO - 47: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:45:46,822 - INFO - 48: Time to fetch a minibatch of data: 0.13s
+2021-10-25 21:45:47,031 - INFO - 49: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:45:47,031 - INFO - Total IO Time: 10.48s
+Application 24696285 resources: utime ~6532s, stime ~1991s, Rss ~551264, inblocks ~337771378, outblocks ~0
+2021-10-25 21:46:34,601 - INFO - Size is 1024
+2021-10-25 21:46:34,603 - INFO - Running IO Test
+2021-10-25 21:46:34,721 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 32768
+output_dir....................: output/weak_scaling_64nodes/dune3d/32768/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:46:34,760 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:46:36,333 - INFO - 0: Time to fetch a minibatch of data: 0.12s
+2021-10-25 21:46:36,566 - INFO - 1: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:46:36,752 - INFO - 2: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:46:36,990 - INFO - 3: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:46:37,166 - INFO - 4: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:46:37,327 - INFO - 5: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:46:37,514 - INFO - 6: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:46:37,713 - INFO - 7: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:46:37,907 - INFO - 8: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:46:38,087 - INFO - 9: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:46:38,266 - INFO - 10: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:46:38,483 - INFO - 11: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:46:38,692 - INFO - 12: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:46:38,882 - INFO - 13: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:46:39,054 - INFO - 14: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:46:39,227 - INFO - 15: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:46:39,513 - INFO - 16: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:46:39,696 - INFO - 17: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:46:39,937 - INFO - 18: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:46:40,125 - INFO - 19: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:46:40,331 - INFO - 20: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:46:40,509 - INFO - 21: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:46:40,688 - INFO - 22: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:46:40,865 - INFO - 23: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:46:41,021 - INFO - 24: Time to fetch a minibatch of data: 0.15s
+2021-10-25 21:46:41,204 - INFO - 25: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:46:41,361 - INFO - 26: Time to fetch a minibatch of data: 0.15s
+2021-10-25 21:46:41,571 - INFO - 27: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:46:41,870 - INFO - 28: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:46:42,016 - INFO - 29: Time to fetch a minibatch of data: 0.14s
+2021-10-25 21:46:42,234 - INFO - 30: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:46:42,461 - INFO - 31: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:46:42,619 - INFO - 32: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:46:42,798 - INFO - 33: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:46:42,948 - INFO - 34: Time to fetch a minibatch of data: 0.15s
+2021-10-25 21:46:43,198 - INFO - 35: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:46:43,380 - INFO - 36: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:46:43,519 - INFO - 37: Time to fetch a minibatch of data: 0.14s
+2021-10-25 21:46:43,808 - INFO - 38: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:46:43,965 - INFO - 39: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:46:44,170 - INFO - 40: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:46:44,454 - INFO - 41: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:46:44,645 - INFO - 42: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:46:44,803 - INFO - 43: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:46:44,992 - INFO - 44: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:46:45,178 - INFO - 45: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:46:45,334 - INFO - 46: Time to fetch a minibatch of data: 0.14s
+2021-10-25 21:46:45,572 - INFO - 47: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:46:45,766 - INFO - 48: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:46:46,025 - INFO - 49: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:46:46,026 - INFO - Total IO Time: 10.32s
+Application 24696287 resources: utime ~13228s, stime ~3709s, Rss ~542064, inblocks ~317454370, outblocks ~0
+2021-10-25 21:48:25,259 - INFO - Size is 2048
+2021-10-25 21:48:25,261 - INFO - Running IO Test
+2021-10-25 21:48:25,394 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 65536
+output_dir....................: output/weak_scaling_64nodes/dune3d/65536/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:48:25,441 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:48:27,670 - INFO - 0: Time to fetch a minibatch of data: 0.10s
+2021-10-25 21:48:27,849 - INFO - 1: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:48:28,051 - INFO - 2: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:48:28,220 - INFO - 3: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:48:28,416 - INFO - 4: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:48:28,621 - INFO - 5: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:48:28,806 - INFO - 6: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:48:29,061 - INFO - 7: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:48:29,267 - INFO - 8: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:48:29,500 - INFO - 9: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:48:29,723 - INFO - 10: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:48:29,916 - INFO - 11: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:48:30,096 - INFO - 12: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:48:30,330 - INFO - 13: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:48:30,494 - INFO - 14: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:48:30,734 - INFO - 15: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:48:30,905 - INFO - 16: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:48:31,093 - INFO - 17: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:48:31,282 - INFO - 18: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:48:31,458 - INFO - 19: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:48:31,639 - INFO - 20: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:48:31,829 - INFO - 21: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:48:31,997 - INFO - 22: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:48:32,207 - INFO - 23: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:48:32,469 - INFO - 24: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:48:32,650 - INFO - 25: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:48:32,851 - INFO - 26: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:48:33,038 - INFO - 27: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:48:33,207 - INFO - 28: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:48:33,427 - INFO - 29: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:48:33,592 - INFO - 30: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:48:33,780 - INFO - 31: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:48:33,966 - INFO - 32: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:48:34,141 - INFO - 33: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:48:34,315 - INFO - 34: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:48:34,490 - INFO - 35: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:48:34,682 - INFO - 36: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:48:34,881 - INFO - 37: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:48:35,062 - INFO - 38: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:48:35,250 - INFO - 39: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:48:35,503 - INFO - 40: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:48:35,724 - INFO - 41: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:48:35,894 - INFO - 42: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:48:36,089 - INFO - 43: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:48:36,254 - INFO - 44: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:48:36,434 - INFO - 45: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:48:36,613 - INFO - 46: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:48:36,770 - INFO - 47: Time to fetch a minibatch of data: 0.16s
+2021-10-25 21:48:36,999 - INFO - 48: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:48:37,187 - INFO - 49: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:48:37,187 - INFO - Total IO Time: 10.12s
+Application 24696288 resources: utime ~26217s, stime ~8064s, Rss ~524924, inblocks ~306812450, outblocks ~0
+2021-10-25 21:51:38,840 - INFO - Size is 4096
+2021-10-25 21:51:38,843 - INFO - Running IO Test
+2021-10-25 21:51:38,974 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_64nodes
+iterations....................: 50
+minibatch_size................: 131072
+output_dir....................: output/weak_scaling_64nodes/dune3d/131072/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:51:39,017 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:51:42,452 - INFO - 0: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:51:42,677 - INFO - 1: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:51:42,998 - INFO - 2: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:51:43,209 - INFO - 3: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:51:43,398 - INFO - 4: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:51:43,628 - INFO - 5: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:51:43,888 - INFO - 6: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:51:44,127 - INFO - 7: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:51:44,407 - INFO - 8: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:51:44,581 - INFO - 9: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:51:44,792 - INFO - 10: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:51:45,050 - INFO - 11: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:51:45,263 - INFO - 12: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:51:47,662 - INFO - 13: Time to fetch a minibatch of data: 2.40s
+2021-10-25 21:51:47,998 - INFO - 14: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:51:48,307 - INFO - 15: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:51:48,513 - INFO - 16: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:51:48,783 - INFO - 17: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:51:48,980 - INFO - 18: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:51:49,186 - INFO - 19: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:51:49,400 - INFO - 20: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:51:49,627 - INFO - 21: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:51:49,863 - INFO - 22: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:51:50,076 - INFO - 23: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:51:50,331 - INFO - 24: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:51:50,557 - INFO - 25: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:51:50,759 - INFO - 26: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:51:50,976 - INFO - 27: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:51:51,213 - INFO - 28: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:51:51,462 - INFO - 29: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:51:51,667 - INFO - 30: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:51:51,884 - INFO - 31: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:51:52,108 - INFO - 32: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:51:52,354 - INFO - 33: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:51:52,531 - INFO - 34: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:51:52,741 - INFO - 35: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:51:52,956 - INFO - 36: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:51:53,163 - INFO - 37: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:51:53,360 - INFO - 38: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:51:53,553 - INFO - 39: Time to fetch a minibatch of data: 0.19s
+2021-10-25 21:51:53,811 - INFO - 40: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:51:54,022 - INFO - 41: Time to fetch a minibatch of data: 0.21s
+2021-10-25 21:51:54,206 - INFO - 42: Time to fetch a minibatch of data: 0.18s
+2021-10-25 21:51:54,437 - INFO - 43: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:51:54,590 - INFO - 44: Time to fetch a minibatch of data: 0.15s
+2021-10-25 21:51:54,789 - INFO - 45: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:51:54,982 - INFO - 46: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:51:55,182 - INFO - 47: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:51:55,404 - INFO - 48: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:51:55,605 - INFO - 49: Time to fetch a minibatch of data: 0.20s
+2021-10-25 21:51:55,606 - INFO - Total IO Time: 13.86s
+Application 24696290 resources: utime ~79194s, stime ~21510s, Rss ~535832, inblocks ~345220900, outblocks ~0
+128
+2021-10-25 21:52:36,257 - INFO - Size is 128
+2021-10-25 21:52:36,259 - INFO - Running IO Test
+2021-10-25 21:52:36,335 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 4096
+output_dir....................: output/weak_scaling_128nodes/dune2d/4096/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:52:36,389 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:52:39,272 - INFO - 0: Time to fetch a minibatch of data: 0.12s
+2021-10-25 21:52:39,735 - INFO - 1: Time to fetch a minibatch of data: 0.46s
+2021-10-25 21:52:40,196 - INFO - 2: Time to fetch a minibatch of data: 0.46s
+2021-10-25 21:52:40,588 - INFO - 3: Time to fetch a minibatch of data: 0.39s
+2021-10-25 21:52:40,863 - INFO - 4: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:52:41,260 - INFO - 5: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:52:41,719 - INFO - 6: Time to fetch a minibatch of data: 0.45s
+2021-10-25 21:52:42,146 - INFO - 7: Time to fetch a minibatch of data: 0.43s
+2021-10-25 21:52:42,634 - INFO - 8: Time to fetch a minibatch of data: 0.49s
+2021-10-25 21:52:43,075 - INFO - 9: Time to fetch a minibatch of data: 0.44s
+2021-10-25 21:52:43,607 - INFO - 10: Time to fetch a minibatch of data: 0.53s
+2021-10-25 21:52:44,182 - INFO - 11: Time to fetch a minibatch of data: 0.57s
+2021-10-25 21:52:44,617 - INFO - 12: Time to fetch a minibatch of data: 0.43s
+2021-10-25 21:52:45,267 - INFO - 13: Time to fetch a minibatch of data: 0.65s
+2021-10-25 21:52:45,724 - INFO - 14: Time to fetch a minibatch of data: 0.46s
+2021-10-25 21:52:46,113 - INFO - 15: Time to fetch a minibatch of data: 0.39s
+2021-10-25 21:52:46,555 - INFO - 16: Time to fetch a minibatch of data: 0.43s
+2021-10-25 21:52:46,903 - INFO - 17: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:52:47,398 - INFO - 18: Time to fetch a minibatch of data: 0.49s
+2021-10-25 21:52:47,879 - INFO - 19: Time to fetch a minibatch of data: 0.48s
+2021-10-25 21:52:48,342 - INFO - 20: Time to fetch a minibatch of data: 0.46s
+2021-10-25 21:52:48,782 - INFO - 21: Time to fetch a minibatch of data: 0.44s
+2021-10-25 21:52:49,231 - INFO - 22: Time to fetch a minibatch of data: 0.45s
+2021-10-25 21:52:49,634 - INFO - 23: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:52:50,065 - INFO - 24: Time to fetch a minibatch of data: 0.43s
+2021-10-25 21:52:50,395 - INFO - 25: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:52:50,744 - INFO - 26: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:52:51,102 - INFO - 27: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:52:51,415 - INFO - 28: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:52:51,766 - INFO - 29: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:52:52,084 - INFO - 30: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:52:52,494 - INFO - 31: Time to fetch a minibatch of data: 0.41s
+2021-10-25 21:52:52,945 - INFO - 32: Time to fetch a minibatch of data: 0.45s
+2021-10-25 21:52:53,273 - INFO - 33: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:52:53,613 - INFO - 34: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:52:53,992 - INFO - 35: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:52:54,525 - INFO - 36: Time to fetch a minibatch of data: 0.52s
+2021-10-25 21:52:55,036 - INFO - 37: Time to fetch a minibatch of data: 0.51s
+2021-10-25 21:52:55,458 - INFO - 38: Time to fetch a minibatch of data: 0.42s
+2021-10-25 21:52:55,777 - INFO - 39: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:52:56,177 - INFO - 40: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:52:56,585 - INFO - 41: Time to fetch a minibatch of data: 0.41s
+2021-10-25 21:52:56,968 - INFO - 42: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:52:57,336 - INFO - 43: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:52:57,696 - INFO - 44: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:52:58,114 - INFO - 45: Time to fetch a minibatch of data: 0.42s
+2021-10-25 21:52:58,424 - INFO - 46: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:52:58,763 - INFO - 47: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:52:59,035 - INFO - 48: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:52:59,458 - INFO - 49: Time to fetch a minibatch of data: 0.42s
+2021-10-25 21:52:59,458 - INFO - Total IO Time: 20.81s
+Application 24696293 resources: utime ~1897s, stime ~1283s, Rss ~603788, inblocks ~683988736, outblocks ~0
+2021-10-25 21:53:25,258 - INFO - Size is 128
+2021-10-25 21:53:25,260 - INFO - Running IO Test
+2021-10-25 21:53:25,336 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 4096
+output_dir....................: output/weak_scaling_128nodes/dune2d/4096/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:53:25,394 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:53:27,199 - INFO - 0: Time to fetch a minibatch of data: 0.12s
+2021-10-25 21:53:27,517 - INFO - 1: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:53:27,808 - INFO - 2: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:53:28,167 - INFO - 3: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:53:28,451 - INFO - 4: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:53:28,807 - INFO - 5: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:53:29,218 - INFO - 6: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:53:29,527 - INFO - 7: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:53:29,916 - INFO - 8: Time to fetch a minibatch of data: 0.39s
+2021-10-25 21:53:30,234 - INFO - 9: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:53:30,630 - INFO - 10: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:53:30,956 - INFO - 11: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:53:31,306 - INFO - 12: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:53:31,674 - INFO - 13: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:53:32,006 - INFO - 14: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:53:32,337 - INFO - 15: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:53:32,648 - INFO - 16: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:53:32,952 - INFO - 17: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:53:33,269 - INFO - 18: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:53:33,634 - INFO - 19: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:53:34,004 - INFO - 20: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:53:34,374 - INFO - 21: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:53:34,732 - INFO - 22: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:53:35,040 - INFO - 23: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:53:35,317 - INFO - 24: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:53:35,644 - INFO - 25: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:53:35,941 - INFO - 26: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:53:36,249 - INFO - 27: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:53:36,540 - INFO - 28: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:53:36,808 - INFO - 29: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:53:37,103 - INFO - 30: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:53:37,432 - INFO - 31: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:53:37,771 - INFO - 32: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:53:38,072 - INFO - 33: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:53:38,395 - INFO - 34: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:53:38,694 - INFO - 35: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:53:38,993 - INFO - 36: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:53:39,324 - INFO - 37: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:53:39,633 - INFO - 38: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:53:39,870 - INFO - 39: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:53:40,190 - INFO - 40: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:53:40,559 - INFO - 41: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:53:40,825 - INFO - 42: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:53:41,082 - INFO - 43: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:53:41,379 - INFO - 44: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:53:41,688 - INFO - 45: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:53:41,955 - INFO - 46: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:53:42,262 - INFO - 47: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:53:42,524 - INFO - 48: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:53:42,856 - INFO - 49: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:53:42,856 - INFO - Total IO Time: 16.28s
+Application 24696294 resources: utime ~1770s, stime ~1295s, Rss ~603772, inblocks ~696769052, outblocks ~0
+2021-10-25 21:54:09,734 - INFO - Size is 256
+2021-10-25 21:54:09,736 - INFO - Running IO Test
+2021-10-25 21:54:09,833 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 8192
+output_dir....................: output/weak_scaling_128nodes/dune2d/8192/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:54:09,878 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:54:11,490 - INFO - 0: Time to fetch a minibatch of data: 0.14s
+2021-10-25 21:54:11,874 - INFO - 1: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:54:12,204 - INFO - 2: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:54:12,479 - INFO - 3: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:54:13,372 - INFO - 4: Time to fetch a minibatch of data: 0.89s
+2021-10-25 21:54:13,690 - INFO - 5: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:54:14,003 - INFO - 6: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:54:14,675 - INFO - 7: Time to fetch a minibatch of data: 0.67s
+2021-10-25 21:54:15,063 - INFO - 8: Time to fetch a minibatch of data: 0.39s
+2021-10-25 21:54:15,328 - INFO - 9: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:54:15,637 - INFO - 10: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:54:15,949 - INFO - 11: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:54:16,267 - INFO - 12: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:54:16,592 - INFO - 13: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:54:16,855 - INFO - 14: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:54:17,172 - INFO - 15: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:54:17,498 - INFO - 16: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:54:17,768 - INFO - 17: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:54:18,087 - INFO - 18: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:54:18,404 - INFO - 19: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:54:18,832 - INFO - 20: Time to fetch a minibatch of data: 0.43s
+2021-10-25 21:54:19,137 - INFO - 21: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:54:19,453 - INFO - 22: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:54:19,783 - INFO - 23: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:54:20,062 - INFO - 24: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:54:20,330 - INFO - 25: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:54:20,657 - INFO - 26: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:54:20,968 - INFO - 27: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:54:21,235 - INFO - 28: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:54:21,572 - INFO - 29: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:54:21,864 - INFO - 30: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:54:22,160 - INFO - 31: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:54:22,468 - INFO - 32: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:54:22,752 - INFO - 33: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:54:23,063 - INFO - 34: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:54:23,361 - INFO - 35: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:54:23,750 - INFO - 36: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:54:24,131 - INFO - 37: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:54:24,468 - INFO - 38: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:54:24,845 - INFO - 39: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:54:25,111 - INFO - 40: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:54:25,489 - INFO - 41: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:54:25,764 - INFO - 42: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:54:26,096 - INFO - 43: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:54:26,461 - INFO - 44: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:54:26,741 - INFO - 45: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:54:27,007 - INFO - 46: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:54:27,287 - INFO - 47: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:54:27,522 - INFO - 48: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:54:27,853 - INFO - 49: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:54:27,853 - INFO - Total IO Time: 17.00s
+Application 24696295 resources: utime ~4162s, stime ~1977s, Rss ~607560, inblocks ~727610130, outblocks ~0
+2021-10-25 21:55:02,859 - INFO - Size is 512
+2021-10-25 21:55:02,861 - INFO - Running IO Test
+2021-10-25 21:55:02,965 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 16384
+output_dir....................: output/weak_scaling_128nodes/dune2d/16384/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:55:03,010 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:55:04,688 - INFO - 0: Time to fetch a minibatch of data: 0.14s
+2021-10-25 21:55:05,041 - INFO - 1: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:55:05,352 - INFO - 2: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:55:05,635 - INFO - 3: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:55:05,941 - INFO - 4: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:55:06,217 - INFO - 5: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:55:06,523 - INFO - 6: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:55:06,877 - INFO - 7: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:55:07,221 - INFO - 8: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:55:07,492 - INFO - 9: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:55:07,787 - INFO - 10: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:55:08,090 - INFO - 11: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:55:08,387 - INFO - 12: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:55:08,664 - INFO - 13: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:55:08,937 - INFO - 14: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:55:09,332 - INFO - 15: Time to fetch a minibatch of data: 0.39s
+2021-10-25 21:55:09,692 - INFO - 16: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:55:09,944 - INFO - 17: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:55:10,260 - INFO - 18: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:55:10,546 - INFO - 19: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:55:10,872 - INFO - 20: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:55:11,182 - INFO - 21: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:55:11,488 - INFO - 22: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:55:11,808 - INFO - 23: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:55:12,064 - INFO - 24: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:55:12,374 - INFO - 25: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:55:12,674 - INFO - 26: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:55:12,937 - INFO - 27: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:55:13,186 - INFO - 28: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:55:13,461 - INFO - 29: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:55:13,800 - INFO - 30: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:55:14,149 - INFO - 31: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:55:14,415 - INFO - 32: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:55:14,672 - INFO - 33: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:55:14,954 - INFO - 34: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:55:15,210 - INFO - 35: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:55:15,593 - INFO - 36: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:55:15,938 - INFO - 37: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:55:16,256 - INFO - 38: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:55:16,509 - INFO - 39: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:55:16,771 - INFO - 40: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:55:17,092 - INFO - 41: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:55:17,365 - INFO - 42: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:55:17,685 - INFO - 43: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:55:17,972 - INFO - 44: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:55:18,239 - INFO - 45: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:55:18,467 - INFO - 46: Time to fetch a minibatch of data: 0.22s
+2021-10-25 21:55:18,700 - INFO - 47: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:55:18,942 - INFO - 48: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:55:19,283 - INFO - 49: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:55:19,284 - INFO - Total IO Time: 15.23s
+Application 24696296 resources: utime ~8058s, stime ~3101s, Rss ~616428, inblocks ~758690806, outblocks ~0
+2021-10-25 21:56:04,152 - INFO - Size is 1024
+2021-10-25 21:56:04,154 - INFO - Running IO Test
+2021-10-25 21:56:04,258 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 32768
+output_dir....................: output/weak_scaling_128nodes/dune2d/32768/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:56:04,296 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:56:06,026 - INFO - 0: Time to fetch a minibatch of data: 0.15s
+2021-10-25 21:56:06,391 - INFO - 1: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:56:08,093 - INFO - 2: Time to fetch a minibatch of data: 1.70s
+2021-10-25 21:56:08,379 - INFO - 3: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:56:08,679 - INFO - 4: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:56:08,946 - INFO - 5: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:56:09,260 - INFO - 6: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:56:09,525 - INFO - 7: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:56:09,827 - INFO - 8: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:56:10,175 - INFO - 9: Time to fetch a minibatch of data: 0.35s
+2021-10-25 21:56:10,476 - INFO - 10: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:56:10,777 - INFO - 11: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:56:11,054 - INFO - 12: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:56:11,361 - INFO - 13: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:56:11,645 - INFO - 14: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:56:11,931 - INFO - 15: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:56:12,255 - INFO - 16: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:56:12,511 - INFO - 17: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:56:12,844 - INFO - 18: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:56:13,134 - INFO - 19: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:56:13,493 - INFO - 20: Time to fetch a minibatch of data: 0.36s
+2021-10-25 21:56:13,778 - INFO - 21: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:56:14,042 - INFO - 22: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:56:14,340 - INFO - 23: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:56:14,636 - INFO - 24: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:56:14,978 - INFO - 25: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:56:15,270 - INFO - 26: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:56:15,533 - INFO - 27: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:56:15,853 - INFO - 28: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:56:16,110 - INFO - 29: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:56:16,413 - INFO - 30: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:56:16,789 - INFO - 31: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:56:17,063 - INFO - 32: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:56:17,328 - INFO - 33: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:56:17,640 - INFO - 34: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:56:18,009 - INFO - 35: Time to fetch a minibatch of data: 0.37s
+2021-10-25 21:56:18,295 - INFO - 36: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:56:18,616 - INFO - 37: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:56:18,899 - INFO - 38: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:56:19,200 - INFO - 39: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:56:19,483 - INFO - 40: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:56:19,823 - INFO - 41: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:56:20,097 - INFO - 42: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:56:20,513 - INFO - 43: Time to fetch a minibatch of data: 0.42s
+2021-10-25 21:56:20,826 - INFO - 44: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:56:21,062 - INFO - 45: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:56:21,313 - INFO - 46: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:56:21,719 - INFO - 47: Time to fetch a minibatch of data: 0.41s
+2021-10-25 21:56:21,999 - INFO - 48: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:56:22,292 - INFO - 49: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:56:22,293 - INFO - Total IO Time: 16.92s
+Application 24696297 resources: utime ~17778s, stime ~5336s, Rss ~606876, inblocks ~771728280, outblocks ~0
+2021-10-25 21:57:54,019 - INFO - Size is 2048
+2021-10-25 21:57:54,021 - INFO - Running IO Test
+2021-10-25 21:57:54,136 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 65536
+output_dir....................: output/weak_scaling_128nodes/dune2d/65536/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 21:57:54,179 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 21:57:56,468 - INFO - 0: Time to fetch a minibatch of data: 0.17s
+2021-10-25 21:57:56,772 - INFO - 1: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:57:57,173 - INFO - 2: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:57:57,435 - INFO - 3: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:57:57,740 - INFO - 4: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:57:58,018 - INFO - 5: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:57:58,322 - INFO - 6: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:57:58,655 - INFO - 7: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:57:58,985 - INFO - 8: Time to fetch a minibatch of data: 0.33s
+2021-10-25 21:57:59,245 - INFO - 9: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:57:59,590 - INFO - 10: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:57:59,886 - INFO - 11: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:58:00,176 - INFO - 12: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:58:00,495 - INFO - 13: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:58:00,765 - INFO - 14: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:58:01,148 - INFO - 15: Time to fetch a minibatch of data: 0.38s
+2021-10-25 21:58:01,443 - INFO - 16: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:58:01,733 - INFO - 17: Time to fetch a minibatch of data: 0.29s
+2021-10-25 21:58:02,041 - INFO - 18: Time to fetch a minibatch of data: 0.31s
+2021-10-25 21:58:02,304 - INFO - 19: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:58:02,587 - INFO - 20: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:58:02,926 - INFO - 21: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:58:03,203 - INFO - 22: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:58:03,462 - INFO - 23: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:58:03,721 - INFO - 24: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:58:04,000 - INFO - 25: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:58:04,293 - INFO - 26: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:58:04,567 - INFO - 27: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:58:04,839 - INFO - 28: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:58:05,094 - INFO - 29: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:58:05,359 - INFO - 30: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:58:05,759 - INFO - 31: Time to fetch a minibatch of data: 0.40s
+2021-10-25 21:58:06,015 - INFO - 32: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:58:06,358 - INFO - 33: Time to fetch a minibatch of data: 0.34s
+2021-10-25 21:58:06,635 - INFO - 34: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:58:06,935 - INFO - 35: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:58:07,200 - INFO - 36: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:58:07,518 - INFO - 37: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:58:07,762 - INFO - 38: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:58:08,006 - INFO - 39: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:58:08,306 - INFO - 40: Time to fetch a minibatch of data: 0.30s
+2021-10-25 21:58:08,582 - INFO - 41: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:58:08,862 - INFO - 42: Time to fetch a minibatch of data: 0.28s
+2021-10-25 21:58:09,250 - INFO - 43: Time to fetch a minibatch of data: 0.39s
+2021-10-25 21:58:09,492 - INFO - 44: Time to fetch a minibatch of data: 0.24s
+2021-10-25 21:58:09,739 - INFO - 45: Time to fetch a minibatch of data: 0.25s
+2021-10-25 21:58:10,020 - INFO - 46: Time to fetch a minibatch of data: 0.27s
+2021-10-25 21:58:10,249 - INFO - 47: Time to fetch a minibatch of data: 0.23s
+2021-10-25 21:58:10,569 - INFO - 48: Time to fetch a minibatch of data: 0.32s
+2021-10-25 21:58:10,832 - INFO - 49: Time to fetch a minibatch of data: 0.26s
+2021-10-25 21:58:10,833 - INFO - Total IO Time: 15.04s
+Application 24696298 resources: utime ~34512s, stime ~9649s, Rss ~739404, inblocks ~781699730, outblocks ~0
+2021-10-25 22:01:53,006 - INFO - Size is 4096
+2021-10-25 22:01:53,009 - INFO - Running IO Test
+2021-10-25 22:01:53,197 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 131072
+output_dir....................: output/weak_scaling_128nodes/dune2d/131072/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 22:01:53,252 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 22:01:55,973 - INFO - 0: Time to fetch a minibatch of data: 0.13s
+2021-10-25 22:01:56,347 - INFO - 1: Time to fetch a minibatch of data: 0.37s
+2021-10-25 22:01:56,902 - INFO - 2: Time to fetch a minibatch of data: 0.55s
+2021-10-25 22:01:57,191 - INFO - 3: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:01:57,502 - INFO - 4: Time to fetch a minibatch of data: 0.31s
+2021-10-25 22:01:57,812 - INFO - 5: Time to fetch a minibatch of data: 0.31s
+2021-10-25 22:01:58,255 - INFO - 6: Time to fetch a minibatch of data: 0.43s
+2021-10-25 22:01:58,571 - INFO - 7: Time to fetch a minibatch of data: 0.31s
+2021-10-25 22:01:58,898 - INFO - 8: Time to fetch a minibatch of data: 0.33s
+2021-10-25 22:01:59,203 - INFO - 9: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:01:59,507 - INFO - 10: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:01:59,832 - INFO - 11: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:02:00,127 - INFO - 12: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:02:00,476 - INFO - 13: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:02:00,796 - INFO - 14: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:02:01,167 - INFO - 15: Time to fetch a minibatch of data: 0.37s
+2021-10-25 22:02:01,477 - INFO - 16: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:02:01,806 - INFO - 17: Time to fetch a minibatch of data: 0.33s
+2021-10-25 22:02:02,078 - INFO - 18: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:02:02,425 - INFO - 19: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:02:02,740 - INFO - 20: Time to fetch a minibatch of data: 0.31s
+2021-10-25 22:02:03,067 - INFO - 21: Time to fetch a minibatch of data: 0.33s
+2021-10-25 22:02:03,313 - INFO - 22: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:02:03,585 - INFO - 23: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:02:03,904 - INFO - 24: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:02:04,216 - INFO - 25: Time to fetch a minibatch of data: 0.31s
+2021-10-25 22:02:04,523 - INFO - 26: Time to fetch a minibatch of data: 0.28s
+2021-10-25 22:02:04,882 - INFO - 27: Time to fetch a minibatch of data: 0.36s
+2021-10-25 22:02:05,152 - INFO - 28: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:02:05,558 - INFO - 29: Time to fetch a minibatch of data: 0.40s
+2021-10-25 22:02:05,835 - INFO - 30: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:02:06,230 - INFO - 31: Time to fetch a minibatch of data: 0.39s
+2021-10-25 22:02:06,516 - INFO - 32: Time to fetch a minibatch of data: 0.28s
+2021-10-25 22:02:06,824 - INFO - 33: Time to fetch a minibatch of data: 0.31s
+2021-10-25 22:02:07,115 - INFO - 34: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:02:07,458 - INFO - 35: Time to fetch a minibatch of data: 0.34s
+2021-10-25 22:02:09,291 - INFO - 36: Time to fetch a minibatch of data: 1.82s
+2021-10-25 22:02:09,531 - INFO - 37: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:02:10,134 - INFO - 38: Time to fetch a minibatch of data: 0.60s
+2021-10-25 22:02:10,339 - INFO - 39: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:02:10,674 - INFO - 40: Time to fetch a minibatch of data: 0.33s
+2021-10-25 22:02:10,961 - INFO - 41: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:02:11,216 - INFO - 42: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:02:11,545 - INFO - 43: Time to fetch a minibatch of data: 0.33s
+2021-10-25 22:02:11,845 - INFO - 44: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:02:12,131 - INFO - 45: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:02:12,413 - INFO - 46: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:02:12,712 - INFO - 47: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:02:12,963 - INFO - 48: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:02:13,249 - INFO - 49: Time to fetch a minibatch of data: 0.28s
+2021-10-25 22:02:13,250 - INFO - Total IO Time: 17.91s
+Application 24696299 resources: utime ~78464s, stime ~20647s, Rss ~749444, inblocks ~848042608, outblocks ~0
+2021-10-25 22:08:08,506 - INFO - Size is 8192
+2021-10-25 22:08:08,509 - INFO - Running IO Test
+2021-10-25 22:08:08,645 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  channels....................: [0, 1, 2]
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 2
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune2d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 262144
+output_dir....................: output/weak_scaling_128nodes/dune2d/262144/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 22:08:08,879 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [
+          0,
+          1,
+          2
+        ],
+        "IncludeValues": true,
+        "MaxVoxels": 20000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor2D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 22:08:13,145 - INFO - 0: Time to fetch a minibatch of data: 1.36s
+2021-10-25 22:08:14,064 - INFO - 1: Time to fetch a minibatch of data: 0.92s
+2021-10-25 22:08:14,566 - INFO - 2: Time to fetch a minibatch of data: 0.50s
+2021-10-25 22:08:14,938 - INFO - 3: Time to fetch a minibatch of data: 0.37s
+2021-10-25 22:08:15,329 - INFO - 4: Time to fetch a minibatch of data: 0.39s
+2021-10-25 22:08:15,743 - INFO - 5: Time to fetch a minibatch of data: 0.41s
+2021-10-25 22:08:16,178 - INFO - 6: Time to fetch a minibatch of data: 0.42s
+2021-10-25 22:08:16,533 - INFO - 7: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:08:16,938 - INFO - 8: Time to fetch a minibatch of data: 0.40s
+2021-10-25 22:08:17,289 - INFO - 9: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:08:17,736 - INFO - 10: Time to fetch a minibatch of data: 0.45s
+2021-10-25 22:08:18,206 - INFO - 11: Time to fetch a minibatch of data: 0.47s
+2021-10-25 22:08:18,561 - INFO - 12: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:08:18,956 - INFO - 13: Time to fetch a minibatch of data: 0.39s
+2021-10-25 22:08:19,295 - INFO - 14: Time to fetch a minibatch of data: 0.34s
+2021-10-25 22:08:19,678 - INFO - 15: Time to fetch a minibatch of data: 0.38s
+2021-10-25 22:08:20,027 - INFO - 16: Time to fetch a minibatch of data: 0.34s
+2021-10-25 22:08:20,424 - INFO - 17: Time to fetch a minibatch of data: 0.40s
+2021-10-25 22:08:20,722 - INFO - 18: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:08:21,105 - INFO - 19: Time to fetch a minibatch of data: 0.38s
+2021-10-25 22:08:21,477 - INFO - 20: Time to fetch a minibatch of data: 0.37s
+2021-10-25 22:08:21,848 - INFO - 21: Time to fetch a minibatch of data: 0.37s
+2021-10-25 22:08:22,224 - INFO - 22: Time to fetch a minibatch of data: 0.37s
+2021-10-25 22:08:22,548 - INFO - 23: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:08:22,996 - INFO - 24: Time to fetch a minibatch of data: 0.45s
+2021-10-25 22:08:23,391 - INFO - 25: Time to fetch a minibatch of data: 0.39s
+2021-10-25 22:08:23,704 - INFO - 26: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:08:24,107 - INFO - 27: Time to fetch a minibatch of data: 0.40s
+2021-10-25 22:08:24,471 - INFO - 28: Time to fetch a minibatch of data: 0.36s
+2021-10-25 22:08:24,821 - INFO - 29: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:08:25,161 - INFO - 30: Time to fetch a minibatch of data: 0.34s
+2021-10-25 22:08:25,528 - INFO - 31: Time to fetch a minibatch of data: 0.37s
+2021-10-25 22:08:25,862 - INFO - 32: Time to fetch a minibatch of data: 0.33s
+2021-10-25 22:08:26,264 - INFO - 33: Time to fetch a minibatch of data: 0.40s
+2021-10-25 22:08:26,616 - INFO - 34: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:08:26,936 - INFO - 35: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:08:27,301 - INFO - 36: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:08:27,646 - INFO - 37: Time to fetch a minibatch of data: 0.34s
+2021-10-25 22:08:27,900 - INFO - 38: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:08:28,312 - INFO - 39: Time to fetch a minibatch of data: 0.41s
+2021-10-25 22:08:28,635 - INFO - 40: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:08:28,938 - INFO - 41: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:08:29,345 - INFO - 42: Time to fetch a minibatch of data: 0.41s
+2021-10-25 22:08:29,640 - INFO - 43: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:08:30,038 - INFO - 44: Time to fetch a minibatch of data: 0.40s
+2021-10-25 22:08:30,359 - INFO - 45: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:08:30,767 - INFO - 46: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:08:31,086 - INFO - 47: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:08:31,450 - INFO - 48: Time to fetch a minibatch of data: 0.36s
+2021-10-25 22:08:31,728 - INFO - 49: Time to fetch a minibatch of data: 0.28s
+2021-10-25 22:08:31,730 - INFO - Total IO Time: 20.45s
+Application 24696302 resources: utime ~169162s, stime ~50475s, Rss ~755644, inblocks ~1104642282, outblocks ~0
+2021-10-25 22:09:05,954 - INFO - Size is 128
+2021-10-25 22:09:05,956 - INFO - Running IO Test
+2021-10-25 22:09:06,030 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 4096
+output_dir....................: output/weak_scaling_128nodes/dune3d/4096/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 22:09:06,081 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 22:09:07,883 - INFO - 0: Time to fetch a minibatch of data: 0.09s
+2021-10-25 22:09:08,253 - INFO - 1: Time to fetch a minibatch of data: 0.37s
+2021-10-25 22:09:08,670 - INFO - 2: Time to fetch a minibatch of data: 0.42s
+2021-10-25 22:09:09,024 - INFO - 3: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:09:09,231 - INFO - 4: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:09:09,545 - INFO - 5: Time to fetch a minibatch of data: 0.31s
+2021-10-25 22:09:09,878 - INFO - 6: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:09:10,170 - INFO - 7: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:09:10,512 - INFO - 8: Time to fetch a minibatch of data: 0.34s
+2021-10-25 22:09:10,844 - INFO - 9: Time to fetch a minibatch of data: 0.33s
+2021-10-25 22:09:11,129 - INFO - 10: Time to fetch a minibatch of data: 0.28s
+2021-10-25 22:09:11,390 - INFO - 11: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:09:11,812 - INFO - 12: Time to fetch a minibatch of data: 0.42s
+2021-10-25 22:09:12,177 - INFO - 13: Time to fetch a minibatch of data: 0.37s
+2021-10-25 22:09:12,520 - INFO - 14: Time to fetch a minibatch of data: 0.34s
+2021-10-25 22:09:12,734 - INFO - 15: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:09:13,048 - INFO - 16: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:09:13,349 - INFO - 17: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:09:13,636 - INFO - 18: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:09:13,991 - INFO - 19: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:09:14,295 - INFO - 20: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:09:14,536 - INFO - 21: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:09:14,993 - INFO - 22: Time to fetch a minibatch of data: 0.46s
+2021-10-25 22:09:15,252 - INFO - 23: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:09:15,584 - INFO - 24: Time to fetch a minibatch of data: 0.33s
+2021-10-25 22:09:15,848 - INFO - 25: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:09:16,124 - INFO - 26: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:09:16,471 - INFO - 27: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:09:16,773 - INFO - 28: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:09:17,095 - INFO - 29: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:09:17,402 - INFO - 30: Time to fetch a minibatch of data: 0.31s
+2021-10-25 22:09:17,748 - INFO - 31: Time to fetch a minibatch of data: 0.34s
+2021-10-25 22:09:17,991 - INFO - 32: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:09:18,253 - INFO - 33: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:09:18,486 - INFO - 34: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:09:18,791 - INFO - 35: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:09:19,243 - INFO - 36: Time to fetch a minibatch of data: 0.44s
+2021-10-25 22:09:19,506 - INFO - 37: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:09:19,800 - INFO - 38: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:09:20,066 - INFO - 39: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:09:20,387 - INFO - 40: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:09:20,687 - INFO - 41: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:09:20,965 - INFO - 42: Time to fetch a minibatch of data: 0.28s
+2021-10-25 22:09:21,241 - INFO - 43: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:09:21,462 - INFO - 44: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:09:21,755 - INFO - 45: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:09:21,997 - INFO - 46: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:09:22,321 - INFO - 47: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:09:22,521 - INFO - 48: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:09:22,867 - INFO - 49: Time to fetch a minibatch of data: 0.35s
+2021-10-25 22:09:22,867 - INFO - Total IO Time: 15.57s
+Application 24696305 resources: utime ~1442s, stime ~1058s, Rss ~464360, inblocks ~631044302, outblocks ~0
+2021-10-25 22:09:47,804 - INFO - Size is 128
+2021-10-25 22:09:47,805 - INFO - Running IO Test
+2021-10-25 22:09:47,879 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 4096
+output_dir....................: output/weak_scaling_128nodes/dune3d/4096/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 22:09:47,930 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 22:09:49,492 - INFO - 0: Time to fetch a minibatch of data: 0.09s
+2021-10-25 22:09:49,722 - INFO - 1: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:09:49,971 - INFO - 2: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:09:50,194 - INFO - 3: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:09:50,402 - INFO - 4: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:09:50,623 - INFO - 5: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:09:50,844 - INFO - 6: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:09:51,044 - INFO - 7: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:09:51,294 - INFO - 8: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:09:51,498 - INFO - 9: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:09:51,750 - INFO - 10: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:09:51,961 - INFO - 11: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:09:52,218 - INFO - 12: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:09:52,485 - INFO - 13: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:09:52,789 - INFO - 14: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:09:53,008 - INFO - 15: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:09:53,221 - INFO - 16: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:09:53,441 - INFO - 17: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:09:53,701 - INFO - 18: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:09:53,993 - INFO - 19: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:09:54,204 - INFO - 20: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:09:54,415 - INFO - 21: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:09:54,620 - INFO - 22: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:09:54,820 - INFO - 23: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:09:54,989 - INFO - 24: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:09:55,195 - INFO - 25: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:09:55,402 - INFO - 26: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:09:55,674 - INFO - 27: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:09:55,923 - INFO - 28: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:09:56,082 - INFO - 29: Time to fetch a minibatch of data: 0.16s
+2021-10-25 22:09:56,300 - INFO - 30: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:09:56,593 - INFO - 31: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:09:56,785 - INFO - 32: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:09:56,975 - INFO - 33: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:09:57,195 - INFO - 34: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:09:57,417 - INFO - 35: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:09:57,676 - INFO - 36: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:09:57,865 - INFO - 37: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:09:58,066 - INFO - 38: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:09:58,258 - INFO - 39: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:09:58,460 - INFO - 40: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:09:58,681 - INFO - 41: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:09:58,903 - INFO - 42: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:09:59,098 - INFO - 43: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:09:59,297 - INFO - 44: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:09:59,531 - INFO - 45: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:09:59,722 - INFO - 46: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:09:59,942 - INFO - 47: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:10:00,137 - INFO - 48: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:10:00,379 - INFO - 49: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:10:00,379 - INFO - Total IO Time: 11.47s
+Application 24696306 resources: utime ~1370s, stime ~1046s, Rss ~464372, inblocks ~636901736, outblocks ~0
+2021-10-25 22:10:26,797 - INFO - Size is 256
+2021-10-25 22:10:26,799 - INFO - Running IO Test
+2021-10-25 22:10:26,886 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 8192
+output_dir....................: output/weak_scaling_128nodes/dune3d/8192/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 22:10:26,921 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 22:10:28,419 - INFO - 0: Time to fetch a minibatch of data: 0.09s
+2021-10-25 22:10:28,653 - INFO - 1: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:10:29,031 - INFO - 2: Time to fetch a minibatch of data: 0.38s
+2021-10-25 22:10:29,214 - INFO - 3: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:10:29,439 - INFO - 4: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:10:29,651 - INFO - 5: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:10:29,914 - INFO - 6: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:10:30,144 - INFO - 7: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:10:30,398 - INFO - 8: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:10:30,630 - INFO - 9: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:10:30,858 - INFO - 10: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:10:31,108 - INFO - 11: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:10:31,309 - INFO - 12: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:10:31,559 - INFO - 13: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:10:31,823 - INFO - 14: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:10:32,000 - INFO - 15: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:10:32,225 - INFO - 16: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:10:32,467 - INFO - 17: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:10:32,768 - INFO - 18: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:10:33,101 - INFO - 19: Time to fetch a minibatch of data: 0.33s
+2021-10-25 22:10:33,309 - INFO - 20: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:10:33,541 - INFO - 21: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:10:33,840 - INFO - 22: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:10:34,046 - INFO - 23: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:10:34,223 - INFO - 24: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:10:34,450 - INFO - 25: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:10:34,680 - INFO - 26: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:10:34,955 - INFO - 27: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:10:35,168 - INFO - 28: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:10:35,336 - INFO - 29: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:10:35,503 - INFO - 30: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:10:35,737 - INFO - 31: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:10:35,931 - INFO - 32: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:10:36,134 - INFO - 33: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:10:36,350 - INFO - 34: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:10:36,575 - INFO - 35: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:10:36,792 - INFO - 36: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:10:36,967 - INFO - 37: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:10:37,227 - INFO - 38: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:10:37,405 - INFO - 39: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:10:37,628 - INFO - 40: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:10:37,899 - INFO - 41: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:10:38,111 - INFO - 42: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:10:38,377 - INFO - 43: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:10:38,601 - INFO - 44: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:10:38,815 - INFO - 45: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:10:39,024 - INFO - 46: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:10:39,215 - INFO - 47: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:10:39,388 - INFO - 48: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:10:39,687 - INFO - 49: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:10:39,688 - INFO - Total IO Time: 11.86s
+Application 24696307 resources: utime ~3193s, stime ~1533s, Rss ~527832, inblocks ~682691142, outblocks ~0
+2021-10-25 22:11:10,234 - INFO - Size is 512
+2021-10-25 22:11:10,235 - INFO - Running IO Test
+2021-10-25 22:11:10,336 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 16384
+output_dir....................: output/weak_scaling_128nodes/dune3d/16384/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 22:11:10,376 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 22:11:11,794 - INFO - 0: Time to fetch a minibatch of data: 0.11s
+2021-10-25 22:11:12,002 - INFO - 1: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:11:12,222 - INFO - 2: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:11:12,443 - INFO - 3: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:11:12,641 - INFO - 4: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:11:12,861 - INFO - 5: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:11:13,068 - INFO - 6: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:11:13,276 - INFO - 7: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:11:13,547 - INFO - 8: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:11:13,770 - INFO - 9: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:11:13,997 - INFO - 10: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:11:14,218 - INFO - 11: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:11:14,444 - INFO - 12: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:11:14,671 - INFO - 13: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:11:14,855 - INFO - 14: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:11:15,064 - INFO - 15: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:11:15,264 - INFO - 16: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:11:15,429 - INFO - 17: Time to fetch a minibatch of data: 0.16s
+2021-10-25 22:11:15,627 - INFO - 18: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:11:15,908 - INFO - 19: Time to fetch a minibatch of data: 0.28s
+2021-10-25 22:11:16,134 - INFO - 20: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:11:16,352 - INFO - 21: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:11:16,571 - INFO - 22: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:11:16,796 - INFO - 23: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:11:17,019 - INFO - 24: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:11:17,191 - INFO - 25: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:11:17,369 - INFO - 26: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:11:17,578 - INFO - 27: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:11:17,812 - INFO - 28: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:11:18,012 - INFO - 29: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:11:18,193 - INFO - 30: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:11:18,786 - INFO - 31: Time to fetch a minibatch of data: 0.59s
+2021-10-25 22:11:18,963 - INFO - 32: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:11:19,151 - INFO - 33: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:11:19,373 - INFO - 34: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:11:19,563 - INFO - 35: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:11:19,828 - INFO - 36: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:11:20,048 - INFO - 37: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:11:20,240 - INFO - 38: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:11:20,482 - INFO - 39: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:11:20,690 - INFO - 40: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:11:21,014 - INFO - 41: Time to fetch a minibatch of data: 0.32s
+2021-10-25 22:11:21,215 - INFO - 42: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:11:21,547 - INFO - 43: Time to fetch a minibatch of data: 0.33s
+2021-10-25 22:11:21,781 - INFO - 44: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:11:21,977 - INFO - 45: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:11:22,125 - INFO - 46: Time to fetch a minibatch of data: 0.14s
+2021-10-25 22:11:22,314 - INFO - 47: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:11:22,529 - INFO - 48: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:11:22,796 - INFO - 49: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:11:22,797 - INFO - Total IO Time: 11.62s
+Application 24696310 resources: utime ~6831s, stime ~2350s, Rss ~551384, inblocks ~689123952, outblocks ~0
+2021-10-25 22:12:08,781 - INFO - Size is 1024
+2021-10-25 22:12:08,783 - INFO - Running IO Test
+2021-10-25 22:12:08,887 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 32768
+output_dir....................: output/weak_scaling_128nodes/dune3d/32768/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 22:12:08,926 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 22:12:10,427 - INFO - 0: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:12:10,606 - INFO - 1: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:12:10,800 - INFO - 2: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:12:10,974 - INFO - 3: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:12:11,190 - INFO - 4: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:12:11,359 - INFO - 5: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:12:11,598 - INFO - 6: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:12:11,761 - INFO - 7: Time to fetch a minibatch of data: 0.16s
+2021-10-25 22:12:11,980 - INFO - 8: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:12:12,148 - INFO - 9: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:12:12,355 - INFO - 10: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:12:12,564 - INFO - 11: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:12:12,845 - INFO - 12: Time to fetch a minibatch of data: 0.28s
+2021-10-25 22:12:13,055 - INFO - 13: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:12:13,233 - INFO - 14: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:12:13,451 - INFO - 15: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:12:13,618 - INFO - 16: Time to fetch a minibatch of data: 0.16s
+2021-10-25 22:12:13,795 - INFO - 17: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:12:14,024 - INFO - 18: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:12:14,238 - INFO - 19: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:12:14,447 - INFO - 20: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:12:14,630 - INFO - 21: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:12:14,854 - INFO - 22: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:12:15,037 - INFO - 23: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:12:15,185 - INFO - 24: Time to fetch a minibatch of data: 0.15s
+2021-10-25 22:12:15,383 - INFO - 25: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:12:15,579 - INFO - 26: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:12:15,747 - INFO - 27: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:12:15,997 - INFO - 28: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:12:16,171 - INFO - 29: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:12:16,337 - INFO - 30: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:12:16,549 - INFO - 31: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:12:16,708 - INFO - 32: Time to fetch a minibatch of data: 0.16s
+2021-10-25 22:12:16,896 - INFO - 33: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:12:17,066 - INFO - 34: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:12:17,275 - INFO - 35: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:12:17,442 - INFO - 36: Time to fetch a minibatch of data: 0.16s
+2021-10-25 22:12:17,591 - INFO - 37: Time to fetch a minibatch of data: 0.15s
+2021-10-25 22:12:17,897 - INFO - 38: Time to fetch a minibatch of data: 0.31s
+2021-10-25 22:12:18,120 - INFO - 39: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:12:18,307 - INFO - 40: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:12:18,602 - INFO - 41: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:12:18,770 - INFO - 42: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:12:18,943 - INFO - 43: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:12:19,115 - INFO - 44: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:12:19,308 - INFO - 45: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:12:19,456 - INFO - 46: Time to fetch a minibatch of data: 0.14s
+2021-10-25 22:12:19,675 - INFO - 47: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:12:19,906 - INFO - 48: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:12:20,095 - INFO - 49: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:12:20,096 - INFO - Total IO Time: 10.34s
+Application 24696311 resources: utime ~12847s, stime ~4064s, Rss ~466948, inblocks ~677720430, outblocks ~0
+2021-10-25 22:13:48,341 - INFO - Size is 2048
+2021-10-25 22:13:48,344 - INFO - Running IO Test
+2021-10-25 22:13:48,461 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 65536
+output_dir....................: output/weak_scaling_128nodes/dune3d/65536/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 22:13:48,501 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 22:13:50,400 - INFO - 0: Time to fetch a minibatch of data: 0.10s
+2021-10-25 22:13:50,660 - INFO - 1: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:13:51,815 - INFO - 2: Time to fetch a minibatch of data: 1.15s
+2021-10-25 22:13:52,020 - INFO - 3: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:13:52,242 - INFO - 4: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:13:52,431 - INFO - 5: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:13:52,676 - INFO - 6: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:13:52,847 - INFO - 7: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:13:53,035 - INFO - 8: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:13:53,237 - INFO - 9: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:13:53,470 - INFO - 10: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:13:53,656 - INFO - 11: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:13:53,853 - INFO - 12: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:13:54,098 - INFO - 13: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:13:54,267 - INFO - 14: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:13:54,532 - INFO - 15: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:13:54,684 - INFO - 16: Time to fetch a minibatch of data: 0.14s
+2021-10-25 22:13:54,873 - INFO - 17: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:13:55,042 - INFO - 18: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:13:55,260 - INFO - 19: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:13:55,453 - INFO - 20: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:13:55,648 - INFO - 21: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:13:55,808 - INFO - 22: Time to fetch a minibatch of data: 0.16s
+2021-10-25 22:13:56,051 - INFO - 23: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:13:56,326 - INFO - 24: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:13:56,530 - INFO - 25: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:13:56,740 - INFO - 26: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:13:56,947 - INFO - 27: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:13:57,111 - INFO - 28: Time to fetch a minibatch of data: 0.16s
+2021-10-25 22:13:57,293 - INFO - 29: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:13:57,457 - INFO - 30: Time to fetch a minibatch of data: 0.16s
+2021-10-25 22:13:57,689 - INFO - 31: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:13:57,839 - INFO - 32: Time to fetch a minibatch of data: 0.15s
+2021-10-25 22:13:58,055 - INFO - 33: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:13:58,196 - INFO - 34: Time to fetch a minibatch of data: 0.14s
+2021-10-25 22:13:58,433 - INFO - 35: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:13:58,621 - INFO - 36: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:13:58,794 - INFO - 37: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:13:58,991 - INFO - 38: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:13:59,201 - INFO - 39: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:13:59,502 - INFO - 40: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:13:59,713 - INFO - 41: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:13:59,863 - INFO - 42: Time to fetch a minibatch of data: 0.15s
+2021-10-25 22:14:00,166 - INFO - 43: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:14:00,360 - INFO - 44: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:14:00,517 - INFO - 45: Time to fetch a minibatch of data: 0.16s
+2021-10-25 22:14:00,665 - INFO - 46: Time to fetch a minibatch of data: 0.14s
+2021-10-25 22:14:00,819 - INFO - 47: Time to fetch a minibatch of data: 0.15s
+2021-10-25 22:14:01,065 - INFO - 48: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:14:01,253 - INFO - 49: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:14:01,253 - INFO - Total IO Time: 11.45s
+Application 24696312 resources: utime ~28387s, stime ~7191s, Rss ~525544, inblocks ~639492034, outblocks ~0
+2021-10-25 22:16:52,094 - INFO - Size is 4096
+2021-10-25 22:16:52,096 - INFO - Running IO Test
+2021-10-25 22:16:52,224 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 131072
+output_dir....................: output/weak_scaling_128nodes/dune3d/131072/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 22:16:52,289 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 22:16:54,663 - INFO - 0: Time to fetch a minibatch of data: 0.12s
+2021-10-25 22:16:54,867 - INFO - 1: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:16:55,085 - INFO - 2: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:16:55,284 - INFO - 3: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:16:55,490 - INFO - 4: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:16:57,078 - INFO - 5: Time to fetch a minibatch of data: 1.59s
+2021-10-25 22:16:57,279 - INFO - 6: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:16:57,462 - INFO - 7: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:16:57,684 - INFO - 8: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:16:57,876 - INFO - 9: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:16:58,068 - INFO - 10: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:16:58,278 - INFO - 11: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:16:58,481 - INFO - 12: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:16:58,686 - INFO - 13: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:16:58,895 - INFO - 14: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:16:59,147 - INFO - 15: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:16:59,345 - INFO - 16: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:16:59,598 - INFO - 17: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:16:59,787 - INFO - 18: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:16:59,967 - INFO - 19: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:17:00,168 - INFO - 20: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:17:00,386 - INFO - 21: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:17:00,582 - INFO - 22: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:17:00,780 - INFO - 23: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:17:00,981 - INFO - 24: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:17:01,216 - INFO - 25: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:17:01,383 - INFO - 26: Time to fetch a minibatch of data: 0.15s
+2021-10-25 22:17:01,593 - INFO - 27: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:17:01,770 - INFO - 28: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:17:01,983 - INFO - 29: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:17:02,160 - INFO - 30: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:17:02,347 - INFO - 31: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:17:02,553 - INFO - 32: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:17:02,755 - INFO - 33: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:17:02,926 - INFO - 34: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:17:03,127 - INFO - 35: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:17:03,297 - INFO - 36: Time to fetch a minibatch of data: 0.16s
+2021-10-25 22:17:03,549 - INFO - 37: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:17:03,731 - INFO - 38: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:17:03,925 - INFO - 39: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:17:04,155 - INFO - 40: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:17:04,377 - INFO - 41: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:17:04,548 - INFO - 42: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:17:04,799 - INFO - 43: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:17:04,971 - INFO - 44: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:17:05,137 - INFO - 45: Time to fetch a minibatch of data: 0.16s
+2021-10-25 22:17:05,297 - INFO - 46: Time to fetch a minibatch of data: 0.15s
+2021-10-25 22:17:05,503 - INFO - 47: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:17:05,683 - INFO - 48: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:17:05,872 - INFO - 49: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:17:05,873 - INFO - Total IO Time: 11.83s
+Application 24696313 resources: utime ~59151s, stime ~15326s, Rss ~534408, inblocks ~618938344, outblocks ~0
+2021-10-25 22:23:09,606 - INFO - Size is 8192
+2021-10-25 22:23:09,609 - INFO - Running IO Test
+2021-10-25 22:23:09,739 - INFO - 
+
+-- CONFIG --
+dataset: 
+  access_mode.................: RandomAccessMode.random_blocks
+  data_directory..............: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+  dimension...................: 3
+  file........................: pixsim_full_train.h5
+  input_shape.................: shape.sparse
+  name........................: dune3d
+  output_shape................: shape.sparse
+  producer....................: dunevoxels
+distributed...................: True
+id............................: weak_scaling_128nodes
+iterations....................: 50
+minibatch_size................: 262144
+output_dir....................: output/weak_scaling_128nodes/dune3d/262144/shape.sparse_out/shape.sparse_in/
+
+2021-10-25 22:23:09,790 - INFO - {
+  "InputFiles": [
+    "/lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged//pixsim_full_train.h5"
+  ],
+  "ProcessDriver": {
+    "EnableFilter": false,
+    "IOManager": {
+      "IOMode": 0,
+      "Input": {
+        "InputFiles": [],
+        "ReadOnlyName": [],
+        "ReadOnlyType": [],
+        "UseH5CoreDriver": false
+      },
+      "Output": {
+        "Compression": 1,
+        "OutFileName": "",
+        "StoreOnlyName": [],
+        "StoreOnlyType": []
+      },
+      "Verbosity": 5
+    },
+    "NumEntries": 0,
+    "ProcessList": {
+      "data": {
+        "Augment": false,
+        "Channels": [],
+        "IncludeValues": true,
+        "MaxVoxels": 30000,
+        "Producer": "dunevoxels",
+        "UnfilledVoxelValue": -999.0
+      }
+    },
+    "ProcessName": [
+      "data"
+    ],
+    "ProcessType": [
+      "BatchFillerSparseTensor3D"
+    ],
+    "RandomAccess": false,
+    "RandomSeed": 0,
+    "StartEntry": 0,
+    "Verbosity": 5
+  },
+  "ProcessName": 0,
+  "Verbosity": 5
+}
+2021-10-25 22:23:13,357 - INFO - 0: Time to fetch a minibatch of data: 0.42s
+2021-10-25 22:23:13,603 - INFO - 1: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:23:13,858 - INFO - 2: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:23:14,068 - INFO - 3: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:23:14,301 - INFO - 4: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:23:14,526 - INFO - 5: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:23:14,805 - INFO - 6: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:23:15,028 - INFO - 7: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:23:15,269 - INFO - 8: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:23:15,463 - INFO - 9: Time to fetch a minibatch of data: 0.19s
+2021-10-25 22:23:15,735 - INFO - 10: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:23:15,995 - INFO - 11: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:23:16,208 - INFO - 12: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:23:16,433 - INFO - 13: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:23:16,665 - INFO - 14: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:23:16,892 - INFO - 15: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:23:17,086 - INFO - 16: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:23:17,356 - INFO - 17: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:23:17,585 - INFO - 18: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:23:17,801 - INFO - 19: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:23:18,015 - INFO - 20: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:23:18,242 - INFO - 21: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:23:18,504 - INFO - 22: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:23:18,757 - INFO - 23: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:23:18,961 - INFO - 24: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:23:19,160 - INFO - 25: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:23:19,376 - INFO - 26: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:23:19,605 - INFO - 27: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:23:19,898 - INFO - 28: Time to fetch a minibatch of data: 0.29s
+2021-10-25 22:23:20,141 - INFO - 29: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:23:20,338 - INFO - 30: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:23:20,555 - INFO - 31: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:23:20,757 - INFO - 32: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:23:21,007 - INFO - 33: Time to fetch a minibatch of data: 0.25s
+2021-10-25 22:23:21,217 - INFO - 34: Time to fetch a minibatch of data: 0.21s
+2021-10-25 22:23:21,451 - INFO - 35: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:23:21,641 - INFO - 36: Time to fetch a minibatch of data: 0.18s
+2021-10-25 22:23:21,913 - INFO - 37: Time to fetch a minibatch of data: 0.27s
+2021-10-25 22:23:22,156 - INFO - 38: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:23:22,401 - INFO - 39: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:23:22,603 - INFO - 40: Time to fetch a minibatch of data: 0.20s
+2021-10-25 22:23:22,821 - INFO - 41: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:23:23,065 - INFO - 42: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:23:23,309 - INFO - 43: Time to fetch a minibatch of data: 0.24s
+2021-10-25 22:23:23,606 - INFO - 44: Time to fetch a minibatch of data: 0.30s
+2021-10-25 22:23:23,862 - INFO - 45: Time to fetch a minibatch of data: 0.26s
+2021-10-25 22:23:24,106 - INFO - 46: Time to fetch a minibatch of data: 0.22s
+2021-10-25 22:23:24,333 - INFO - 47: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:23:24,561 - INFO - 48: Time to fetch a minibatch of data: 0.23s
+2021-10-25 22:23:24,732 - INFO - 49: Time to fetch a minibatch of data: 0.17s
+2021-10-25 22:23:24,733 - INFO - Total IO Time: 12.30s
+Application 24696314 resources: utime ~121314s, stime ~41625s, Rss ~541140, inblocks ~709113294, outblocks ~0
