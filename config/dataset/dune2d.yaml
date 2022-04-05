@@ -1,6 +1,0 @@
-name:           "dune2d"
-data_directory: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
-file:           "pixsim_full_train.h5"
-dimension:      2
-channels:       [0,1,2]
-producer:       "dunevoxels"

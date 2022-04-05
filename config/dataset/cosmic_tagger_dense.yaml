@@ -1,8 +1,0 @@
-name:           "cosmic_tagger_sparse"
-data_directory: /lus/grand/projects/datascience/cadams/datasets/SBND/
-file:           "cosmic_tagging_train_dense.h5"
-dimension:      2
-channels:       [0,1,2]
-producer:       "sbndwire"
-input_shape:    "dense"
-output_shape:   "dense"
