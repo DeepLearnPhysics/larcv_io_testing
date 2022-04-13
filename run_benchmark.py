@@ -59,6 +59,9 @@ def run_benchmark(mode: str, system : str):
 
     if mode == "single_process":
         run_single_process(job_config, env_dict)
+    elif mode == "single_node_weak":
+        run_single_node_weak(job_config, env_dict)
+
 
 def run_single_node_weak(job_config, env_dict):
         for dataset in job_config.datasets:
@@ -90,7 +93,7 @@ def run_single_node_weak(job_config, env_dict):
             base_command += [f'dataset.input_shape={this_ds_config.input_shape}',]
             for run_size in batch_sizes:
                 command = base_command.copy()
-                command += [f'id={mode}-warmup',]
+                command += [f'id=single-node-weak-warmup',]
                 command += [f'minibatch_size={run_size}',]
                 print(command)
                 # Run the command:
@@ -98,7 +101,7 @@ def run_single_node_weak(job_config, env_dict):
 
                 # Now run for real:
                 command = base_command.copy()
-                command += [f'id={mode}-benchmark',]
+                command += [f'id=single-node-weak-benchmark',]
                 command += [f'minibatch_size={run_size}',]
                 print(command)
                 # run_command(command)
@@ -124,7 +127,7 @@ def run_single_process(job_config, env_dict):
             base_command += [f'dataset.input_shape={this_ds_config.input_shape}',]
             for run_size in batch_sizes:
                 command = base_command.copy()
-                command += [f'id={mode}-warmup',]
+                command += [f'id=single-process-warmup',]
                 command += [f'minibatch_size={run_size}',]
                 print(command)
                 # Run the command:
@@ -132,7 +135,7 @@ def run_single_process(job_config, env_dict):
 
                 # Now run for real:
                 command = base_command.copy()
-                command += [f'id={mode}-benchmark',]
+                command += [f'id=single-process-benchmark',]
                 command += [f'minibatch_size={run_size}',]
                 print(command)
                 run_command(command)
