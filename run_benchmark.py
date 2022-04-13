@@ -23,7 +23,7 @@ if sys.version_info < MIN_PYTHON:
 # in config/dataset/
 
 
-systems = ['ThetaGPU']
+systems = ['ThetaGPU', 'Polaris']
 benchmarks = ['single_process']
 
 import test_configs.systems as system_config
@@ -90,6 +90,23 @@ def run_benchmark(mode: str, system : str):
                 stdout, stderr = proc.communicate()
                 stdout = stdout.decode('utf-8')
                 stderr = stderr.decode('utf-8')
+
+                # Now run for real:
+                command = base_command.copy()
+                command += [f'id={mode}-benchmark',]
+                command += [f'minibatch_size={run_size}',]
+                
+                # Run the command:
+                proc = subprocess.Popen(
+                    command,
+                    stdout = subprocess.PIPE,
+                    stderr = subprocess.PIPE,
+                    env= env_dict,
+                    )
+
+                stdout, stderr = proc.communicate()
+
+
 
 def setup_env(setup_string: str, return_env=True):
     '''

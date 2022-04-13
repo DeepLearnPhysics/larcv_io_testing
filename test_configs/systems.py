@@ -13,3 +13,15 @@ WORKDIR=/home/cadams/ThetaGPU/larcv_iotest/
 cd $WORKDIR
 
 '''
+
+Polaris = '''
+
+module load cray-python
+module load hdf5
+source /lus/grand/projects/datascience/cadams/larcv_io_benchmark/polaris_venv/bin/activate
+
+WORKDIR=//lus/grand/projects/datascience/cadams/larcv_io_benchmark/larcv_io_testing/
+cd $WORKDIR
+
+'''
+
