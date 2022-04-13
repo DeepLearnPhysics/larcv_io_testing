@@ -83,7 +83,6 @@ def run_single_node_weak(job_config, env_dict):
 
             local_batch_size = this_ds_config.local_batch_size
 
-            batch_sizes = [local_batch_size*r for r in ranks]
 
             # Build up the run configuration:
             base_command = ['mpirun', '-n', str(ranks)]
@@ -91,10 +90,11 @@ def run_single_node_weak(job_config, env_dict):
             base_command += [f'dataset={this_ds_config.dataset_name}',]
             base_command += [f'dataset.output_shape={this_ds_config.output_shape}',]
             base_command += [f'dataset.input_shape={this_ds_config.input_shape}',]
-            for run_size in batch_sizes:
+            for run_size in ranks:
                 command = base_command.copy()
+                batch_size = run_size * local_batch_size
                 command += [f'id=single-node-weak-warmup',]
-                command += [f'minibatch_size={run_size}',]
+                command += [f'minibatch_size={batch_size}',]
                 print(command)
                 # Run the command:
                 # run_command(command)
@@ -102,7 +102,7 @@ def run_single_node_weak(job_config, env_dict):
                 # Now run for real:
                 command = base_command.copy()
                 command += [f'id=single-node-weak-benchmark',]
-                command += [f'minibatch_size={run_size}',]
+                command += [f'minibatch_size={batch_size}',]
                 print(command)
                 # run_command(command)
               
