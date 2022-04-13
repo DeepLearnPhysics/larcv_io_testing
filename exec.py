@@ -115,7 +115,7 @@ class iotest(object):
             mb = self.larcv_fetcher.fetch_next_batch("iotest", force_pop=True)
             end = time.time()
 
-            logger.info(f"{i}: Time to fetch a minibatch of data: {end - start:.2f}s")
+            logger.info(f"{i}: Time to fetch a minibatch of data: {end - start:.6f}s")
 
         logger.info(f"Total IO Time: {time.time() - global_start:.4f}s")
 

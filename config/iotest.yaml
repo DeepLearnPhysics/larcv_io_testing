@@ -4,5 +4,10 @@ defaults:
 distributed: true
 iterations: 50
 minibatch_size: 2
+
+dataset:
+    data_directory: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+    # data_directory: /lus/grand/projects/datascience/cadams/datasets/DUNE/full_merged/
+
 id: ???
-output_dir: output/${id}/${dataset.name}/${minibatch_size}/${dataset.output_shape}_out/${dataset.input_shape}_in/
+output_dir: output/${dataset.name}/${id}/${minibatch_size}/${dataset.output_shape}_out_${dataset.input_shape}_in/
