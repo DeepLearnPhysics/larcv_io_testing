@@ -3,9 +3,10 @@ from dataclasses import dataclass
 
 
 @dataclass
-class single_node_strong:
+class multinode_weak:
     local_batch_size:  int = 16
-    max_ranks:         int = 32
+    ranks_per_node:    int = 32
+    max_ranks:         int = 512*32
     warmup_iterations: int = 100
     real_iterations:   int = 100
     dataset_name:      str = ""
@@ -13,44 +14,44 @@ class single_node_strong:
     output_shape:      str = "sparse"
 
 @dataclass
-class DUNE2D_SPARSE(single_node_strong):
+class DUNE2D_SPARSE(multinode_weak):
     dataset_name:      str = "dune2d"
     pass
 
 @dataclass
-class DUNE2D_DENSE(single_node_strong):
+class DUNE2D_DENSE(multinode_weak):
     dataset_name:      str = "dune2d"
     output_shape:      str = "dense"
     pass
 
 @dataclass
-class DUNE3D_SPARSE(single_node_strong):
+class DUNE3D_SPARSE(multinode_weak):
     dataset_name:      str = "dune3d"
     pass
 
 @dataclass
-class DUNE3D_DENSE(single_node_strong):
+class DUNE3D_DENSE(multinode_weak):
     dataset_name:      str = "dune3d"
-    local_batch_size:  int = 1
+    batch_size:        int = 16
     max_ranks:         int = 16
     output_shape:      str = "dense"
 
 @dataclass
-class COSMIC_TAGGER_DENSE(single_node_strong):
+class COSMIC_TAGGER_DENSE(multinode_weak):
     dataset_name:      str = "cosmic_tagger_dense"
-    local_batch_size:  int = 1
-    max_ranks:         int = 32
+    batch_size:        int = 64
+    max_ranks:         int = 64
     input_shape:       str = "dense"
     output_shape:      str = "dense"
     pass
 
 @dataclass
-class COSMIC_TAGGER_SPARSE_SPARSE(single_node_strong):
+class COSMIC_TAGGER_SPARSE_SPARSE(multinode_weak):
     dataset_name:      str = "cosmic_tagger_sparse"
     pass
 
 @dataclass
-class COSMIC_TAGGER_SPARSE_DENSE(single_node_strong):
+class COSMIC_TAGGER_SPARSE_DENSE(multinode_weak):
     dataset_name:      str = "cosmic_tagger_sparse"
     end_batch_size:    int = 64
     output_shape:      str = "dense"
