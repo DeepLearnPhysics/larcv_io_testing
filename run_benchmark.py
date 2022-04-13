@@ -24,7 +24,7 @@ if sys.version_info < MIN_PYTHON:
 
 
 systems = ['ThetaGPU', 'Polaris']
-benchmarks = ['single_process']
+benchmarks = ['single_process', 'single_node_weak']
 
 import test_configs.systems as system_config
 
@@ -50,6 +50,53 @@ def run_benchmark(mode: str, system : str):
     # Now, we have the env_dict and job configuration, we're able to run the job launcher
 
     if mode == "single_process":
+        run_single_process(job_config, env_dict)
+
+def run_single_node_weak(job_config, env_dict):
+        for dataset in job_config.datasets:
+            this_ds_config = getattr(job_config, dataset)
+
+            # First, we are scaling up the number of ranks,
+            # with fixed work-per-rank.
+            # 
+            # So, determine the work-per rank and the stopping rank.
+            # Assume we start with one rank.
+            
+            start_rank = 1
+            end_rank   = int(numpy.log2(this_ds_config.max_ranks)) + 1
+
+            print(start_rank)
+            print(end_rank)
+
+            ranks      = numpy.arange(start_rank, end_rank)
+
+            local_batch_size = this_ds_config.local_batch_size
+
+            batch_sizes = [local_batch_size*r for r in ranks]
+
+            # Build up the run configuration:
+            base_command = ['mpirun', '-n', str(ranks)]
+            base_command += ['python', 'exec.py', 'distributed=False']
+            base_command += [f'dataset={this_ds_config.dataset_name}',]
+            base_command += [f'dataset.output_shape={this_ds_config.output_shape}',]
+            base_command += [f'dataset.input_shape={this_ds_config.input_shape}',]
+            for run_size in batch_sizes:
+                command = base_command.copy()
+                command += [f'id={mode}-warmup',]
+                command += [f'minibatch_size={run_size}',]
+                print(command)
+                # Run the command:
+                # run_command(command)
+
+                # Now run for real:
+                command = base_command.copy()
+                command += [f'id={mode}-benchmark',]
+                command += [f'minibatch_size={run_size}',]
+                print(command)
+                # run_command(command)
+              
+
+def run_single_process(job_config, env_dict):
         # For each dataset, scale the minibatch size in log2-space
         # Run for warmup iterations, then run for real iterations.
         for dataset in job_config.datasets:
@@ -61,12 +108,6 @@ def run_benchmark(mode: str, system : str):
             powers      = numpy.arange(start_power, end_power)
 
             batch_sizes = [2**p for p in powers]
-            # points = numpy.geomspace(
-            #     start = this_ds_config.start_batch_size,
-            #     stop  = this_ds_config.end_batch_size+1,
-            #     num   = int(npoints),
-            #     dtype = int)
-            # print(points)
 
             # Build up the run configuration:
             base_command = ['python', 'exec.py', 'distributed=False']
@@ -79,34 +120,28 @@ def run_benchmark(mode: str, system : str):
                 command += [f'minibatch_size={run_size}',]
                 print(command)
                 # Run the command:
-                proc = subprocess.Popen(
-                    command,
-                    stdout = subprocess.PIPE,
-                    stderr = subprocess.PIPE,
-                    # cwd=None,
-                    env=env_dict
-                )
-
-                stdout, stderr = proc.communicate()
-                stdout = stdout.decode('utf-8')
-                stderr = stderr.decode('utf-8')
+                run_command(command)
 
                 # Now run for real:
                 command = base_command.copy()
                 command += [f'id={mode}-benchmark',]
                 command += [f'minibatch_size={run_size}',]
-                
-                # Run the command:
-                proc = subprocess.Popen(
-                    command,
-                    stdout = subprocess.PIPE,
-                    stderr = subprocess.PIPE,
-                    env= env_dict,
-                    )
+                print(command)
+                run_command(command)
+              
 
-                stdout, stderr = proc.communicate()
+def run_command(command):
+    proc = subprocess.Popen(
+        command,
+        stdout = subprocess.PIPE,
+        stderr = subprocess.PIPE,
+        # cwd=None,
+        env=env_dict
+    )
 
-
+    stdout, stderr = proc.communicate()
+    stdout = stdout.decode('utf-8')
+    stderr = stderr.decode('utf-8')
 
 def setup_env(setup_string: str, return_env=True):
     '''
