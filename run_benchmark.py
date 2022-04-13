@@ -36,7 +36,15 @@ def run_benchmark(mode: str, system : str):
 
     # Pull the configs for this mode:
     if mode == "single_process":
-        import test_configs.single_process as job_config
+        import test_configs.single_process      as job_config
+    elif mode == "single_node_weak":
+        import test_configs.single_node_weak    as job_config
+    elif mode == "single_node_strong":
+        import test_configs.single_node_strong  as job_config
+    elif mode == "multinode_weak":
+        import test_configs.multinode_weak      as job_config
+    else:
+        raise Exception(f"Mode {mode} not found")
     # else ... import as job_config
 
 
