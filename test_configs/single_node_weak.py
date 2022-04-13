@@ -5,7 +5,7 @@ from dataclasses import dataclass
 @dataclass
 class single_node_strong:
     local_batch_size:  int = 16
-    max_ranks:         int = 32
+    max_ranks:         int = 64
     warmup_iterations: int = 100
     real_iterations:   int = 100
     dataset_name:      str = ""
