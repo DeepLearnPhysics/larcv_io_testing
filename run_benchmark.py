@@ -120,16 +120,21 @@ def run_multinode_weak(job_config, env_dict):
             
             local_batch_size = this_ds_config.local_batch_size
             ranks_per_node   = this_ds_config.ranks_per_node
-            start_rank = int(numpy.log2(ranks_per_node))  # This is one node
-            end_rank   = int(numpy.log2(this_ds_config.max_ranks)) + 1
+            
+            # We compute the node sizes in powers of 2:
+
+            start_nodes = 1  # This is one node
+            end_nodes   = int(numpy.log2(this_ds_config.max_nodes)) + 1
+
+            # 
 
 
-            ranks      = numpy.arange(start_rank, end_rank)
+            nodes      = numpy.arange(start_nodes, end_nodes)
 
             print(dataset)
-            print(ranks)
+            print(nodes)
 
-            ranks = [2**r for r in ranks]
+            nodes = [2**r for r in nodes]
 
 
             # Build up the run configuration:
@@ -137,10 +142,11 @@ def run_multinode_weak(job_config, env_dict):
             base_command += [f'dataset={this_ds_config.dataset_name}',]
             base_command += [f'dataset.output_shape={this_ds_config.output_shape}',]
             base_command += [f'dataset.input_shape={this_ds_config.input_shape}',]
-            for run_size in ranks:
-                command = ['mpiexec', '-n', str(run_size), '-ppn', str(ranks_per_node)]
+            for node_size in nodes:
+                n_ranks = node_size * ranks_per_node
+                command = ['mpiexec', '-n', str(n_ranks), '-ppn', str(ranks_per_node)]
                 command += base_command.copy()
-                batch_size = run_size * local_batch_size # This will be total batch size
+                batch_size = n_ranks * local_batch_size # This will be total batch size
                 command += [f'id=single-node-weak-warmup',]
                 command += [f'minibatch_size={batch_size}',]
                 print(command)
@@ -148,7 +154,7 @@ def run_multinode_weak(job_config, env_dict):
                 # run_command(command, env_dict)
 
                 # Now run for real:
-                command = ['mpiexec', '-n', str(run_size), '-ppn', str(ranks_per_node)]
+                command = ['mpiexec', '-n', str(n_ranks), '-ppn', str(ranks_per_node)]
                 command += base_command.copy()
                 command += [f'id=single-node-weak-benchmark',]
                 command += [f'minibatch_size={batch_size}',]
