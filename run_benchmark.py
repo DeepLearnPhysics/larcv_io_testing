@@ -120,12 +120,13 @@ def run_multinode_weak(job_config, env_dict):
             
             local_batch_size = this_ds_config.local_batch_size
             ranks_per_node   = this_ds_config.ranks_per_node
-            start_rank = int(numpy.log2(ranks_per_node)) + 1 # This is one node
+            start_rank = int(numpy.log2(ranks_per_node))  # This is one node
             end_rank   = int(numpy.log2(this_ds_config.max_ranks)) + 1
 
 
             ranks      = numpy.arange(start_rank, end_rank)
 
+            print(dataset)
             print(ranks)
 
             ranks = [2**r for r in ranks]
