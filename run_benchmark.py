@@ -61,6 +61,8 @@ def run_benchmark(mode: str, system : str):
         run_single_process(job_config, env_dict)
     elif mode == "single_node_weak":
         run_single_node_weak(job_config, env_dict)
+    elif mode == "single_node_strong":
+        run_single_node_strong(job_config, env_dict)
 
 
 def run_single_node_weak(job_config, env_dict):
