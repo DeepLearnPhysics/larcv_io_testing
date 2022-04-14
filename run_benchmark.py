@@ -24,7 +24,7 @@ if sys.version_info < MIN_PYTHON:
 
 
 systems = ['ThetaGPU', 'Polaris']
-benchmarks = ['single_process', 'single_node_weak']
+benchmarks = ['single_process', 'single_node_weak', 'single_node_strong']
 
 import test_configs.systems as system_config
 
@@ -106,6 +106,48 @@ def run_single_node_weak(job_config, env_dict):
                 print(command)
                 run_command(command, env_dict)
               
+
+
+def run_single_node_strong(job_config, env_dict):
+        for dataset in job_config.datasets:
+            this_ds_config = getattr(job_config, dataset)
+
+            # This is a fixed problem size (batch size)
+            # with variable ranks
+            # 
+            # Assume we start with one rank.
+            
+            start_rank = 1
+            end_rank   = int(numpy.log2(this_ds_config.max_ranks)) + 1
+
+
+            ranks      = numpy.arange(start_rank, end_rank)
+
+            ranks = [2**r for r in ranks]
+            batch_size = this_ds_config.batch_size
+
+
+            # Build up the run configuration:
+            base_command = ['python', 'exec.py', 'distributed=True']
+            base_command += [f'dataset={this_ds_config.dataset_name}',]
+            base_command += [f'dataset.output_shape={this_ds_config.output_shape}',]
+            base_command += [f'dataset.input_shape={this_ds_config.input_shape}',]
+            for run_size in ranks:
+                command = ['mpiexec', '-n', str(run_size)]
+                command += base_command.copy()
+                command += [f'id=single-node-strong-warmup',]
+                command += [f'minibatch_size={batch_size}',]
+                print(command)
+                # Run the command:
+                run_command(command, env_dict)
+
+                # Now run for real:
+                command = ['mpiexec', '-n', str(run_size)]
+                command += base_command.copy()
+                command += [f'id=single-node-strong-benchmark',]
+                command += [f'minibatch_size={batch_size}',]
+                print(command)
+                run_command(command, env_dict)
 
 def run_single_process(job_config, env_dict):
         # For each dataset, scale the minibatch size in log2-space
