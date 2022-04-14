@@ -32,13 +32,13 @@ class DUNE3D_SPARSE(multinode_weak):
 @dataclass
 class DUNE3D_DENSE(multinode_weak):
     dataset_name:      str = "dune3d"
-    batch_size:        int = 16
+    local_batch_size:  int = 1
     output_shape:      str = "dense"
 
 @dataclass
 class COSMIC_TAGGER_DENSE(multinode_weak):
     dataset_name:      str = "cosmic_tagger_dense"
-    batch_size:        int = 64
+    local_batch_size:  int = 2
     input_shape:       str = "dense"
     output_shape:      str = "dense"
     pass
@@ -46,12 +46,13 @@ class COSMIC_TAGGER_DENSE(multinode_weak):
 @dataclass
 class COSMIC_TAGGER_SPARSE_SPARSE(multinode_weak):
     dataset_name:      str = "cosmic_tagger_sparse"
+    local_batch_size:  int = 2
     pass
 
 @dataclass
 class COSMIC_TAGGER_SPARSE_DENSE(multinode_weak):
     dataset_name:      str = "cosmic_tagger_sparse"
-    end_batch_size:    int = 64
+    local_batch_size:  int = 2
     output_shape:      str = "dense"
     pass
 
