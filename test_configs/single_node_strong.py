@@ -13,30 +13,30 @@ class single_node_strong:
     output_shape:      str = "sparse"
 
 @dataclass
-class DUNE2D_SPARSE(single_process):
+class DUNE2D_SPARSE(single_node_strong):
     dataset_name:      str = "dune2d"
     pass
 
 @dataclass
-class DUNE2D_DENSE(single_process):
+class DUNE2D_DENSE(single_node_strong):
     dataset_name:      str = "dune2d"
     output_shape:      str = "dense"
     pass
 
 @dataclass
-class DUNE3D_SPARSE(single_process):
+class DUNE3D_SPARSE(single_node_strong):
     dataset_name:      str = "dune3d"
     pass
 
 @dataclass
-class DUNE3D_DENSE(single_process):
+class DUNE3D_DENSE(single_node_strong):
     dataset_name:      str = "dune3d"
     batch_size:        int = 16
     max_ranks:         int = 16
     output_shape:      str = "dense"
 
 @dataclass
-class COSMIC_TAGGER_DENSE(single_process):
+class COSMIC_TAGGER_DENSE(single_node_strong):
     dataset_name:      str = "cosmic_tagger_dense"
     batch_size:        int = 32
     max_ranks:         int = 32
@@ -45,14 +45,14 @@ class COSMIC_TAGGER_DENSE(single_process):
     pass
 
 @dataclass
-class COSMIC_TAGGER_SPARSE_SPARSE(single_process):
+class COSMIC_TAGGER_SPARSE_SPARSE(single_node_strong):
     dataset_name:      str = "cosmic_tagger_sparse"
     pass
 
 @dataclass
-class COSMIC_TAGGER_SPARSE_DENSE(single_process):
+class COSMIC_TAGGER_SPARSE_DENSE(single_node_strong):
     dataset_name:      str = "cosmic_tagger_sparse"
-    end_batch_size:    int = 64
+    batch_size:        int = 64
     output_shape:      str = "dense"
     pass
 
