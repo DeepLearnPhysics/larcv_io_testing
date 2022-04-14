@@ -6,7 +6,7 @@ from dataclasses import dataclass
 class multinode_weak:
     local_batch_size:  int = 16
     ranks_per_node:    int = 32
-    max_ranks:         int = 512*32
+    max_nodes:         int = 512
     warmup_iterations: int = 100
     real_iterations:   int = 100
     dataset_name:      str = ""
@@ -33,14 +33,12 @@ class DUNE3D_SPARSE(multinode_weak):
 class DUNE3D_DENSE(multinode_weak):
     dataset_name:      str = "dune3d"
     batch_size:        int = 16
-    max_ranks:         int = 16
     output_shape:      str = "dense"
 
 @dataclass
 class COSMIC_TAGGER_DENSE(multinode_weak):
     dataset_name:      str = "cosmic_tagger_dense"
     batch_size:        int = 64
-    max_ranks:         int = 64
     input_shape:       str = "dense"
     output_shape:      str = "dense"
     pass
