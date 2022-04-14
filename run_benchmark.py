@@ -24,7 +24,7 @@ if sys.version_info < MIN_PYTHON:
 
 
 systems = ['ThetaGPU', 'Polaris']
-benchmarks = ['single_process', 'single_node_weak', 'single_node_strong']
+benchmarks = ['single_process', 'single_node_weak', 'single_node_strong', 'multinode_weak']
 
 import test_configs.systems as system_config
 
@@ -63,7 +63,8 @@ def run_benchmark(mode: str, system : str):
         run_single_node_weak(job_config, env_dict)
     elif mode == "single_node_strong":
         run_single_node_strong(job_config, env_dict)
-
+    elif mode == "multinode_weak":
+        run_multinode_weak(job_config, env_dict)
 
 def run_single_node_weak(job_config, env_dict):
         for dataset in job_config.datasets:
@@ -136,7 +137,7 @@ def run_multinode_weak(job_config, env_dict):
             base_command += [f'dataset.output_shape={this_ds_config.output_shape}',]
             base_command += [f'dataset.input_shape={this_ds_config.input_shape}',]
             for run_size in ranks:
-                command = ['mpiexec', '-n', str(run_size)]
+                command = ['mpiexec', '-n', str(run_size), '-ppn', str(ranks_per_node)]
                 command += base_command.copy()
                 batch_size = run_size * local_batch_size # This will be total batch size
                 command += [f'id=single-node-weak-warmup',]
@@ -146,7 +147,7 @@ def run_multinode_weak(job_config, env_dict):
                 # run_command(command, env_dict)
 
                 # Now run for real:
-                command = ['mpiexec', '-n', str(run_size)]
+                command = ['mpiexec', '-n', str(run_size), '-ppn', str(ranks_per_node)]
                 command += base_command.copy()
                 command += [f'id=single-node-weak-benchmark',]
                 command += [f'minibatch_size={batch_size}',]
