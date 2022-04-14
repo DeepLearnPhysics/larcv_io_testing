@@ -137,7 +137,7 @@ def run_single_node_strong(job_config, env_dict):
             for run_size in ranks:
                 command = ['mpiexec', '-n', str(run_size)]
                 command += base_command.copy()
-                command += [f'id=single-node-strong-warmup',]
+                command += [f'id=single-node-strong-warmup/{run_size}ranks/',]
                 command += [f'minibatch_size={batch_size}',]
                 print(command)
                 # Run the command:
@@ -146,7 +146,7 @@ def run_single_node_strong(job_config, env_dict):
                 # Now run for real:
                 command = ['mpiexec', '-n', str(run_size)]
                 command += base_command.copy()
-                command += [f'id=single-node-strong-benchmark',]
+                command += [f'id=single-node-strong-benchmark/{run_size}ranks/',]
                 command += [f'minibatch_size={batch_size}',]
                 print(command)
                 run_command(command, env_dict)
