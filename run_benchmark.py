@@ -123,7 +123,7 @@ def run_multinode_weak(job_config, env_dict):
             
             # We compute the node sizes in powers of 2:
 
-            start_nodes = 1  # This is one node
+            start_nodes = 0  # This is one node since it's 2**0
             end_nodes   = int(numpy.log2(this_ds_config.max_nodes)) + 1
 
             # 
@@ -147,19 +147,19 @@ def run_multinode_weak(job_config, env_dict):
                 command = ['mpiexec', '-n', str(n_ranks), '-ppn', str(ranks_per_node)]
                 command += base_command.copy()
                 batch_size = n_ranks * local_batch_size # This will be total batch size
-                command += [f'id=single-node-weak-warmup',]
+                command += [f'id=multinode-weak-warmup',]
                 command += [f'minibatch_size={batch_size}',]
                 print(command)
                 # Run the command:
-                # run_command(command, env_dict)
+                run_command(command, env_dict)
 
                 # Now run for real:
                 command = ['mpiexec', '-n', str(n_ranks), '-ppn', str(ranks_per_node)]
                 command += base_command.copy()
-                command += [f'id=single-node-weak-benchmark',]
+                command += [f'id=multinode-weak-benchmark',]
                 command += [f'minibatch_size={batch_size}',]
                 print(command)
-                # run_command(command, env_dict)
+                run_command(command, env_dict)
               
 
 def run_single_node_strong(job_config, env_dict):
