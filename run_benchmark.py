@@ -23,7 +23,7 @@ if sys.version_info < MIN_PYTHON:
 # in config/dataset/
 
 
-systems = ['ThetaGPU', 'Polaris']
+systems = ['ThetaGPU', 'Polaris', 'Local']
 benchmarks = ['single_process', 'single_node_weak', 'single_node_strong', 'multinode_weak']
 
 import test_configs.systems as system_config
@@ -235,7 +235,7 @@ def run_single_process(job_config, env_dict):
                 command += [f'minibatch_size={run_size}',]
                 print(command)
                 run_command(command, env_dict)
-              
+                exit()
 
 def run_command(command, env_dict):
     proc = subprocess.Popen(
@@ -249,6 +249,9 @@ def run_command(command, env_dict):
     stdout, stderr = proc.communicate()
     stdout = stdout.decode('utf-8')
     stderr = stderr.decode('utf-8')
+
+    print(stdout)
+    print(stderr)
 
 def setup_env(setup_string: str, return_env=True):
     '''
