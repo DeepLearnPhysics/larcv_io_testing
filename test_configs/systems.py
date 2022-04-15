@@ -25,3 +25,9 @@ cd $WORKDIR
 
 '''
 
+
+Local = '''
+
+echo "Nothing to do"
+
+'''

@@ -32,14 +32,22 @@ class iotest(object):
         self.args = config
 
 
-        rank = self.init_mpi()
+        self.rank = self.init_mpi()
+
 
         # Create the output directory if needed:
-        if rank == 0:
+        if self.rank == 0:
             outpath = pathlib.Path(self.args.output_dir)
             outpath.mkdir(exist_ok=True, parents=True)
 
-        self.configure_logger(rank)
+        # Need to check if the process has already completed
+        should_run = self.check_run()
+
+
+        if not should_run:
+            exit()
+
+        self.configure_logger(self.rank)
 
         logger = logging.getLogger()
         logger.info(f"Size is {self.size}")
@@ -93,6 +101,46 @@ class iotest(object):
             logger.addHandler(handler)
             logger.setLevel(logging.INFO)
 
+
+    def check_run(self):
+
+        # This function inspects the output folder, looks for the
+        # process.log file.  It inspects the file and looks for the 
+        # string "Total IO Time: "
+        # 
+        # If it finds this, it does not repeat this run.
+        # 
+        # In distributed mode, only the root rank checks the file.
+        
+        # Only the root rank checks:
+
+        if self.rank == 0:
+            # First, does the file exist?
+            file = pathlib.Path(self.args.output_dir + "/process.log")
+            if not file.exists():
+                should_run = True
+            else:
+                # Open the file and look at it's contents:
+                found = False
+                with open(file) as _f:
+                    for line in _f:
+                        if "Total IO Time:" in line: 
+                            found = True
+                            break
+                if not found: should_run = True
+                else: should_run = False
+
+
+        # Broadcast decision all ranks and return
+
+        if self.args.distributed:
+            from mpi4py import MPI
+            comm = MPI.COMM_WORLD
+
+            should_run = comm.bcast(should_run, root=0)
+
+        # If not distributed, we don't need to broadcast, just return:
+        return should_run
 
     def iotest(self):
 
